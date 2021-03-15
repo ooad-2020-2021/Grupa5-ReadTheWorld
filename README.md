@@ -3,7 +3,7 @@
 
 **Opis projekta:**
 
-X je aplikacija koja omogućava korisnicima objavljivanje literarnih radova, kao i čitanje, ocjenjivanje, i komentiranje radova drugih korisnika. 
+ReadTheWorld je aplikacija koja omogućava korisnicima objavljivanje literarnih radova, kao i čitanje, ocjenjivanje, i komentiranje radova drugih korisnika. 
 Prilikom objavljivanja, korisnik bira jednu od dozvoljenih kategorija: kratka priča, esej, poezija, članak, ili strip. Također, korisnik dodaje i tagove koji omogućuju drugim korisnicima da pretražuju radove po ključnim riječima, i dodatne
 informacije poput žanra. Radovi se mogu pretraživati po ključnim riječima, kategorijama, žanrovima, i vremenu čitanja. Korisnik ima mogućnost da uredi svoj profil, i da osvaja razne "titule" koje se dodjeljuju na osnovu broja 
 objavljenih radova, ocjena tih radova, ali i broja radova koje je korisnik čitao i ocijenio.  
