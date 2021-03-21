@@ -1,9 +1,12 @@
 # Grupa5-ReadTheWorld
+
+![default](https://user-images.githubusercontent.com/73440086/111911490-22cba200-8a66-11eb-99fe-a281783eaba5.png) 
+
 **Tema:** Aplikacija za objavljivanje i čitanje literarnih radova
 
 **Opis projekta:**
 
-ReadTheWorld je aplikacija koja omogućava korisnicima objavljivanje literarnih radova, kao i čitanje, ocjenjivanje, i komentiranje radova drugih korisnika. 
+Writely je aplikacija koja omogućava korisnicima objavljivanje literarnih radova, kao i čitanje, ocjenjivanje, i komentiranje radova drugih korisnika. 
 Prilikom objavljivanja, korisnik bira jednu od dozvoljenih kategorija: kratka priča, esej, poezija, članak, ili strip. Također, korisnik dodaje i tagove koji omogućuju drugim korisnicima da pretražuju radove po ključnim riječima, i dodatne
 informacije poput žanra. Radovi se mogu pretraživati po ključnim riječima, kategorijama, žanrovima, i vremenu čitanja. Korisnik ima mogućnost da uredi svoj profil, i da osvaja razne "titule" koje se dodjeljuju na osnovu broja 
 objavljenih radova, ocjena tih radova, ali i broja radova koje je korisnik čitao i ocijenio.  
