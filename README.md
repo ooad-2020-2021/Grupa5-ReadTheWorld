@@ -7,13 +7,7 @@
 
 **Opis projekta:**
 
-Writely je aplikacija koja omogućava korisnicima objavljivanje literarnih radova, kao i čitanje, ocjenjivanje, i komentiranje radova drugih korisnika. 
-Prilikom objavljivanja, korisnik bira jednu od dozvoljenih kategorija: kratka priča, esej, poezija, članak, ili strip. Također, korisnik dodaje i tagove koji omogućuju drugim korisnicima da pretražuju radove po ključnim riječima, i dodatne
-informacije poput žanra. Radovi se mogu pretraživati po ključnim riječima, kategorijama, žanrovima, i vremenu čitanja. Korisnik ima mogućnost da uredi svoj profil, i da osvaja razne "titule" koje se dodjeljuju na osnovu broja 
-objavljenih radova, ocjena tih radova, ali i broja radova koje je korisnik čitao i ocijenio.  
-Administratori imaju mogućnost kreiranja takmičenja, gdje korisnici pišu na unaprijed zadanu temu, i proglašava se pobjednik za svaku od kategorija glasanjem korisnika. Na profilu korisnika nalazi se i informacije
-na kojim takmičenjima je pobijedio. 
-Automatski se ažuriraju liste Top 10 radova po ocjenama korisnika za svaku kategoriju. Cilj aplikacije je da stvori platformu gdje svako literarno djelo može naći publiku. 
+Writely je aplikacija koja ima za cilj povezati sve zaljubljenike u književnost u jedinstvenu mrežu. Aplikacija je edukativnog i zabavnog karaktera, jer nudi mogućnost interakcije između korisnika koji čitaju i korisnika koji objavljuju svoje literarne radove. Svaki korisnik (bio registrovan ili ne) može čitati radove drugih korisnika, a za registrovane korisnike dostupne su mnoge druge opcije poput objavljivanja vlastitih radova i recenzije radova drugih korisnika. Bez obzira na to koliko ste iskusni u objavljivanju radova ili koji stil pisanja preferirate, vaši radovi će uvijek naći publiku na našoj aplikaciji. Za najambicioznije autore, tu je i mogućnost prijave na književna takmičenja iz različitih kategorija, gdje mogu uporediti svoje vještina pisanja u odnosu na druge.
 
 **Procesi:**
 
