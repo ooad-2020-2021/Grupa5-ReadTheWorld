@@ -1,6 +1,7 @@
 # Grupa5-ReadTheWorld
 
-![default](https://user-images.githubusercontent.com/73440086/111911490-22cba200-8a66-11eb-99fe-a281783eaba5.png) 
+![default11](https://user-images.githubusercontent.com/73440086/111911605-940b5500-8a66-11eb-95fd-11da84abf501.png)
+
 
 **Tema:** Aplikacija za objavljivanje i čitanje literarnih radova
 
