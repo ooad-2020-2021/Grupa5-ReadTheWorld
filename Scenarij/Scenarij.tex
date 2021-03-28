@@ -1,0 +1,412 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern}
+\usepackage[croatian]{babel}
+\usepackage[margin=1.4in]{geometry}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{mathastext}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{afterpage}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{epstopdf}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{algorithm}  
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+\usetikzlibrary{trees}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[titletoc,page]{appendix}
+\usepackage[up,bf,raggedright]{titlesec}
+\usepackage{blindtext}
+
+% \definecolor{mygreen}{rgb}{0,0.6,0}
+% \definecolor{mygray}{rgb}{0.5,0.5,0.5}
+% \definecolor{mymauve}{rgb}{0.58,0,0.82}
+% \lstset{ %
+% 	backgroundcolor=\color{white},   
+% 	basicstyle=\ttfamily\footnotesize,        
+% 	breakatwhitespace=false,        
+% 	breaklines=true,                
+% 	captionpos=b,                   
+% 	commentstyle=\color{mygreen},      
+% 	escapeinside={\%*}{*)},         
+% 	extendedchars=true,             
+% 	frame=single,	                   
+% 	keepspaces=true,                 
+% 	keywordstyle=\color{blue},       
+% 	language=Python,                 
+% 	numbers=left,                   
+% 	numbersep=5pt,                   
+% 	numberstyle=\tiny\color{mygray}, 
+% 	rulecolor=\color{black},        
+% 	showspaces=false,                
+% 	showstringspaces=false,         
+% 	showtabs=false,                  
+% 	stepnumber=1,                    
+% 	stringstyle=\color{mymauve},     
+% 	title=\lstname                   
+% }
+
+% \theoremstyle{definition}
+% \newtheorem{mydef}{Definicija} [chapter]
+% \newtheorem{myexp}{Primjer} [chapter]
+% \newtheorem{myteo}{Teorem} [chapter]
+% \newtheorem{mypro}{Dokaz} [chapter]
+% \makeatletter
+% \newcommand{\newalgname}[1]{%
+% 	\renewcommand{\ALG@name}{#1}%
+% }
+
+% \renewcommand{\tablename}{Tabela}
+% \newalgname{Algoritam}
+% \renewcommand{\listalgorithmname}{Lista\ALG@name s}
+% \makeatother
+
+\begin{document}
+	\begin{titlepage}
+		\newcommand{\HRule}{\rule{\linewidth}{1mm}} 
+		\noindent
+		{\large
+			\begin{minipage}{0.2\textwidth}
+				\begin{center} 
+					\includegraphics[width=0.7\textwidth]{unsa.jpg}
+				\end{center}
+			\end{minipage}
+			\begin{minipage}{0.58\textwidth}
+				\begin{center} \large
+					Univerzitet u Sarajevu\\
+					Elektrotehnički fakultet u Sarajevu\\
+					Odsjek za računarstvo i informatiku\\
+				\end{center}
+			\end{minipage}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center} 
+					\includegraphics[width=0.7\textwidth]{ETF_logo.png}
+				\end{center}
+			\end{minipage}
+			\\[6 cm] 
+			
+			
+			\begin{center}
+				\LARGE 
+				\bfseries 
+				ReadTheWorld \\
+				\large 
+				Kreiranje scenarija na osnovu slučajeva upotrebe   \\[0.5cm]
+				
+				Objektno orijentisana analiza i dizajn
+				\\[6.0 cm] 
+			\end{center}	 		
+			
+
+			\begin{minipage}{0.9\textwidth}
+				\begin{flushright}
+					\textbf{Iris Pjanić}  \\
+					\textbf{Adna Husičić}  \\			
+					\textbf{Mirza Kadrić}  \\
+				\end{flushright}
+			\end{minipage}\\[1 cm]
+		}
+	\end{titlepage}
+	\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\begin{flushleft}
+{\large \textbf{Najkompleksnije funkcionalnosti}
+\begin{itemize}
+    \item Registracija i kreiranje profila
+    \item Čitanje i pretraživanje radova
+    \item Objavljivanje sadržaja \newline
+\end{itemize} \newpage
+
+\textbf{Registracija i kreiranje profila}}  \newline
+
+\textbf{\textit{Opis scenarija}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|} 
+ \hline
+ \textbf{Ime slučaja upotrebe} & Registracija i kreiranje profila \\ 
+ \hline
+ \textbf{Opis} & Neregistrovani korisnik putem početnog interfejsa ispunjava obrazac sa podacima potrebnim za registraciju, te klikom na dugme kreira svoj račun nakon čega može urediti svoj profil ako želi\\ 
+ \hline
+ \textbf{Vezani zahtjevi} &  \\ 
+ \hline
+ \textbf{Preduslovi} & Korisnik ima dostupan Web interfejs za registraciju (pristupio je Web sistemu putem preglednika) \\ 
+ \hline
+ \textbf{Posljedice - uspješan završetak} & Korisnik ima potvrdu da je kreirao račun te mu se prikazuje početni interfejs aplikacije (sa dodatnom opcijom za uređivanjem profila) \\ 
+ \hline
+ \textbf{Posljedice - neuspješan završetak} & Odbijanje zahtjeva - pristup sistemu kao guest \\ 
+ \hline
+ \textbf{Primarni akteri} & Neregistrovani korisnik \\ 
+ \hline
+ \textbf{Ostali akteri} & Sistem \\ 
+ \hline
+ \textbf{Glavni tok} & Korisnik se želi registrovati na sistem zbog dodatnih opcija (poput objavljivanja svojih radova); Unosi osobne podatke (ime, prezime, e-mail adresa, korisničko ime i lozinka) u naznačene rubrike; Tokom unosa se vrši validacija podataka; Klikom na označeno dugme korisnik uspješno završava kreiranje računa  \\ 
+ \hline
+ \textbf{Proširenja/Alternative} & Korisnik je unio nevalidne podatke, sistem mu šalje poruku u vidu obavještenja o konkretnom problemu te se korisniku nudi ponovni unos podataka; \\ 
+ \hline
+\end{tabular} \newpage
+
+\textbf{\textit{Glavni tok}}
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Pristupanje interfejsu za registraciju & 2. Prikaz forme za unos podataka potrebnih za kreiranje računa \\
+\hline
+3. Unos podataka &  \\
+\hline
+4. Odabir opcije za potvrdu & 5. Validacija unesenih podataka \\
+\hline
+& 6. Izvještavanje da je korisnik uspješno kreirao račun \\
+\hline
+\end{tabular} \newline \newline
+
+\textbf{\textit{Alternativni tok - Korisnik unio nepotpune ili neispravne podatke}}
+
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Pristupanje interfejsu za registraciju & 2. Prikaz forme za unos podataka potrebnih za kreiranje računa \\
+\hline
+3. Unos podataka &  \\
+\hline
+4. Odabir opcije za potvrdu & 5. Validacija unesenih podataka \\
+\hline
+& 6. Izvještavanje  korisnika da nije unio ispravne podatke uz prikaz konkretnog problema \\
+\hline
+& 7. Omogućavanje ponovnog unosa podataka \\
+\hline
+8. Nastavak na koraku 3. glavnog toka & \\
+\hline
+\end{tabular} \newline \newline
+
+% \textbf{\textit{Alternativni tok 2 - Korisnik želi urediti svoj profil}}
+% \begin{tabular}{|m{7cm}|m{7cm}|}
+% \hline
+% \textbf{Korisnik} & \textbf{Sistem} \\
+% \hline
+% 1. Pristupanje interfejsu za registraciju & 2. Prikaz forme za unos podataka potrebnih za kreiranje računa \\
+% \hline
+% 3. Unos podataka &  \\
+% \hline
+% 4. Odabir opcije za potvrdu & 5. Validacija unesenih podataka \\
+% \hline
+% & 6. Izvještavanje da je korisnik uspješno kreirao račun \\
+% \hline
+% 7. Odabir opcije za uređivanje profila & 8. Prikaz interfejsa za uređivanje profila \\
+% \hline
+% 8. Upload profilne slike &  \\
+% \hline
+% 8. Unos "Writely" moto &  \\
+% \hline
+% 8. Odabir "Writely" titule &  \\
+% \hline
+% 9. Unos novog korisničkog imena & \\
+% \hline
+% & 10. Odabir opcije za potvrdu \\
+% \hline
+% \end{tabular}
+\newpage
+
+{\large\textbf{Čitanje i pretraživanje radova}}  \newline
+
+\textbf{\textit{Opis scenarija}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|} 
+ \hline
+ \textbf{Ime slučaja upotrebe} & Čitanje i pretraživanje radova \\ 
+ \hline
+ \textbf{Opis} & Korisnik čita radova na početnoj stranici ili dodatno primjenjuje određene kriterije filtriranja i sortiranja radova, a zatim ih čita \\ 
+ \hline
+ \textbf{Vezani zahtjevi} & / \\ 
+ \hline
+ \textbf{Preduslovi} & Korisnik je pristupio sistemu tj. nalazi se na glavnom interfejsu \\ 
+ \hline
+ \textbf{Posljedice - uspješan završetak} & Korisnik uspijeva čitati sadržaj koji je želio \\ 
+ \hline
+ \textbf{Posljedice - neuspješan završetak} & Ne postoje radovi koji zadovoljavaju kriterije odabrane od strane korisnika \\ 
+ \hline
+ \textbf{Primarni akteri} & Korisnik (guest ili registrovani) \\
+ \hline
+ \textbf{Ostali akteri} & Sistem \\ 
+ \hline
+ \textbf{Glavni tok} & Korisnik čita radove sa početnog interfejsa \\ 
+ \hline
+ \textbf{Proširenja/Alternative} & Korisnik pretražuje radove po ključnim riječima, žanru, kategoriji te zadaje kriterij sortiranja \\ 
+ \hline
+\end{tabular} \newpage
+
+\textbf{\textit{Glavni tok}}
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+ & 1. Sortiranje radova po default kriteriju \\
+\hline
+ & 2. Prikaz početne stranice \\
+\hline
+3. Čitanje &  \\
+\hline
+\end{tabular} \newline \newline
+
+\textbf{\textit{Alternativni tok - korisnik samostalno želi pretraživati radove}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+ & 1. Sortiranje radova po default kriteriju \\
+\hline
+ & 2. Prikaz početne stranice \\
+\hline
+3. Unos ključnih riječi; Odabir žanra, kategorije te kriterija sortiranja &  \\
+\hline
+ & 4. Sortiranje, filtriranje i pretraživanje na osnovu korisnikovih kriterija \\
+\hline
+ & 5. Prikaz pronađenih rezultata \\
+\hline
+ & 5. Čitanje \\
+\hline
+\end{tabular} \newpage
+
+{\large\textbf{Objavljivanje sadržaja}}  \newline
+
+\textbf{\textit{Opis scenarija}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|} 
+ \hline
+ \textbf{Ime slučaja upotrebe} & Objavljivanje sadržaja \\ 
+ \hline
+ \textbf{Opis} & Korisnik objavljuje rad \\ 
+ \hline
+ \textbf{Vezani zahtjevi} & / \\ 
+ \hline
+ \textbf{Preduslovi} & Korisnik je registrovan \\ 
+ \hline
+ \textbf{Posljedice - uspješan završetak} & Objavljen rad \\ 
+ \hline
+ \textbf{Posljedice - neuspješan završetak} & Odbijanje zahtjeva za objavljivanjem \\ 
+ \hline
+ \textbf{Primarni akteri} & Registrovani korisnik (autor) \\ 
+ \hline
+ \textbf{Ostali akteri} & / \\ 
+ \hline
+ \textbf{Glavni tok} & Korisnik odabire opciju za objavljivanje rada i unosi podatke o djelu: žanr, tagovi, a ukoliko je potrebno vrši i upload
+file-ova; Vrši se validacija unesenih podataka i rad se objavljuje \\ 
+ \hline
+ \textbf{Proširenja/Alternative} & / \\ 
+ \hline
+\end{tabular} \newpage
+
+\textbf{\textit{Glavni tok}}
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Odabir opcije za objavu sadržaja &  \\
+\hline
+2. Login/registracija &  \\
+\hline
+3. Unos osnovnih podataka o djelu &  \\
+\hline
+3.1. Upload file-ova &  \\
+\hline
+4. Potvrda objave sadržaja &  \\
+\hline
+ & 5. Validacija unesenih podataka \\
+\hline
+ & 6. Objavljen rad \\
+\hline
+\end{tabular} \newline \newline
+
+\textbf{\textit{Alternativni tok 1 - Korisnik je već prijavljen na sistem}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Odabir opcije za objavu sadržaja &  \\
+\hline
+2. Unos osnovnih podataka o djelu &  \\
+\hline
+2.1. Upload file-ova &  \\
+\hline
+3. Potvrda objave sadržaja &  \\
+\hline
+ & 4. Validacija unesenih podataka \\
+\hline
+ & 5. Objavljen rad \\
+\hline
+\end{tabular} \newline \newline
+
+{\textbf{\textit{Alternativni tok 2 - Korisnik nije unio sve neophodne podatke}}}
+
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Odabir opcije za objavu sadržaja &  \\
+\hline
+2. Login/registracija &  \\
+\hline
+3. Unos osnovnih podataka o djelu &  \\
+\hline
+3.1. Upload file-ova &  \\
+\hline
+4. Odabir opcije za potvrdu &  \\
+\hline
+ & 5. Validacija unesenih podataka \\
+\hline
+ & 6. Odbijanje zahtjeva za objavljivanjem sadržaja \\
+\hline
+ & 7. Prikaz obavještenja o podacima koji nedostaju \\
+ \hline
+\end{tabular} \newpage
+
+\textbf{\textit{Alternativni tok 3 - Korisnik je unio neophodne podatke ali su nevalidni}}
+
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Odabir opcije za objavu sadržaja &  \\
+\hline
+2. Login/registracija &  \\
+\hline
+3. Unos osnovnih podataka o djelu &  \\
+\hline
+3.1. Upload file-ova &  \\
+\hline
+4. Odabir opcije za potvrdu &  \\
+\hline
+ & 5. Validacija unesenih podataka \\
+\hline
+ & 6. Odbijanje zahtjeva za objavljivanjem sadržaja \\
+\hline
+ & 7. Slanje obavijesti korisniku o razlogu odbijanja \\
+ \hline
+\end{tabular} \newline \newline
+
+\textbf{\textit{Alternativni tok 4 - Korisnik u toku unošenja podataka odustane od objavljivanja}} \\
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+1. Odabir opcije za objavu sadržaja &  \\
+\hline
+2. Login/registracija &  \\
+\hline
+3. Odabir opcije za odustajanje &  \\
+\hline
+\end{tabular}
+
+
+\end{flushleft}
+\end{document}
