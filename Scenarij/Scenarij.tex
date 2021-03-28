@@ -124,19 +124,19 @@
 \begin{flushleft}
 {\large \textbf{Najkompleksnije funkcionalnosti}
 \begin{itemize}
-    \item Registracija i kreiranje profila
+    \item Registracija i uređivanje profila
     \item Čitanje i pretraživanje radova
     \item Objavljivanje sadržaja \newline
 \end{itemize} \newpage
 
-\textbf{Registracija i kreiranje profila}}  \newline
+\textbf{Registracija i uređivanje profila}}  \newline
 
 \textbf{\textit{Opis scenarija}} \\
 \begin{tabular}{|m{7cm}|m{7cm}|} 
  \hline
- \textbf{Ime slučaja upotrebe} & Registracija i kreiranje profila \\ 
+ \textbf{Ime slučaja upotrebe} & Registracija i uređivanje profila \\ 
  \hline
- \textbf{Opis} & Neregistrovani korisnik putem početnog interfejsa ispunjava obrazac sa podacima potrebnim za registraciju, te klikom na dugme kreira svoj račun nakon čega može urediti svoj profil ako želi\\ 
+ \textbf{Opis} & Neregistrovani korisnik putem početnog interfejsa ispunjava obrazac sa podacima potrebnim za registraciju, te klikom na dugme kreira svoj račun nakon čega može urediti svoj profil ako želi \\ 
  \hline
  \textbf{Vezani zahtjevi} &  \\ 
  \hline
@@ -150,9 +150,9 @@
  \hline
  \textbf{Ostali akteri} & Sistem \\ 
  \hline
- \textbf{Glavni tok} & Korisnik se želi registrovati na sistem zbog dodatnih opcija (poput objavljivanja svojih radova); Unosi osobne podatke (ime, prezime, e-mail adresa, korisničko ime i lozinka) u naznačene rubrike; Tokom unosa se vrši validacija podataka; Klikom na označeno dugme korisnik uspješno završava kreiranje računa  \\ 
+ \textbf{Glavni tok} & Korisnik se želi registrovati na sistem zbog dodatnih opcija (poput objavljivanja svojih radova); Unosi osobne podatke (ime, prezime, e-mail adresa, korisničko ime i lozinka) u naznačene rubrike; Tokom unosa se vrši validacija podataka; Klikom na označeno dugme korisnik uspješno završava kreiranje računa \\ 
  \hline
- \textbf{Proširenja/Alternative} & Korisnik je unio nevalidne podatke, sistem mu šalje poruku u vidu obavještenja o konkretnom problemu te se korisniku nudi ponovni unos podataka; \\ 
+ \textbf{Proširenja/Alternative} & Korisnik je unio nevalidne podatke, sistem mu šalje poruku u vidu obavještenja o konkretnom problemu te se korisniku nudi ponovni unos podataka [A]; Korisnik želi urediti profil nakon kreiranja: dodavanjem profilne slike, unosom "Writely" moto, odabirom "Writely" titule ili promijenom korisničkog imena [P] \\ 
  \hline
 \end{tabular} \newpage
 
@@ -171,7 +171,7 @@
 \hline
 \end{tabular} \newline \newline
 
-\textbf{\textit{Alternativni tok - Korisnik unio nepotpune ili neispravne podatke}}
+\textbf{\textit{Alternativni tok 1 - Korisnik unio nepotpune ili neispravne podatke}}
 
 \begin{tabular}{|m{7cm}|m{7cm}|}
 \hline
@@ -191,32 +191,24 @@
 \hline
 \end{tabular} \newline \newline
 
-% \textbf{\textit{Alternativni tok 2 - Korisnik želi urediti svoj profil}}
-% \begin{tabular}{|m{7cm}|m{7cm}|}
-% \hline
-% \textbf{Korisnik} & \textbf{Sistem} \\
-% \hline
-% 1. Pristupanje interfejsu za registraciju & 2. Prikaz forme za unos podataka potrebnih za kreiranje računa \\
-% \hline
-% 3. Unos podataka &  \\
-% \hline
-% 4. Odabir opcije za potvrdu & 5. Validacija unesenih podataka \\
-% \hline
-% & 6. Izvještavanje da je korisnik uspješno kreirao račun \\
-% \hline
-% 7. Odabir opcije za uređivanje profila & 8. Prikaz interfejsa za uređivanje profila \\
-% \hline
-% 8. Upload profilne slike &  \\
-% \hline
-% 8. Unos "Writely" moto &  \\
-% \hline
-% 8. Odabir "Writely" titule &  \\
-% \hline
-% 9. Unos novog korisničkog imena & \\
-% \hline
-% & 10. Odabir opcije za potvrdu \\
-% \hline
-% \end{tabular}
+\textbf{\textit{Alternativni tok 2 (Proširenje) - Korisnik želi urediti svoj profil nakon registracije}}
+\begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+\textbf{Korisnik} & \textbf{Sistem} \\
+\hline
+ & 1. Prikaz interfejsa za uređivanje profila \\
+\hline
+2. Upload slike &  \\
+\hline
+3. Unos ostalih opcionalnih polja - "Writely moto" i "Writely titula"; Novo korisničko ime & \\
+\hline
+4. Odabir opcije za potvrdu & \\
+\hline
+& 5. Validacija \\
+\hline
+& 6. Izvještavanje da je korisnik uspješno uredio profil \\
+\hline
+\end{tabular}
 \newpage
 
 {\large\textbf{Čitanje i pretraživanje radova}}  \newline
