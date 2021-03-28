@@ -1,0 +1,234 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern}
+\usepackage[croatian]{babel}
+\usepackage[margin=1.4in]{geometry}
+\usepackage[labelsep=period]{caption}
+\usepackage{graphicx}
+\usepackage{mathastext}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{afterpage}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{epstopdf}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{algorithm}  
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+\usetikzlibrary{trees}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[titletoc,page]{appendix}
+\usepackage[up,bf,raggedright]{titlesec}
+\usepackage{blindtext}
+
+
+% \addto\captionscroatian{%
+% 	\def\refname{Reference}%
+% 	\def\bibname{Reference}%
+% 	\def\tablename{Tabela}%
+% }%
+% \definecolor{mygreen}{rgb}{0,0.6,0}
+% \definecolor{mygray}{rgb}{0.5,0.5,0.5}
+% \definecolor{mymauve}{rgb}{0.58,0,0.82}
+% \lstset{ %
+% 	backgroundcolor=\color{white},   
+% 	basicstyle=\ttfamily\footnotesize,        
+% 	breakatwhitespace=false,        
+% 	breaklines=true,                
+% 	captionpos=b,                   
+% 	commentstyle=\color{mygreen},      
+% 	escapeinside={\%*}{*)},         
+% 	extendedchars=true,             
+% 	frame=single,	                   
+% 	keepspaces=true,                 
+% 	keywordstyle=\color{blue},       
+% 	language=Python,                 
+% 	numbers=left,                   
+% 	numbersep=5pt,                   
+% 	numberstyle=\tiny\color{mygray}, 
+% 	rulecolor=\color{black},        
+% 	showspaces=false,                
+% 	showstringspaces=false,         
+% 	showtabs=false,                  
+% 	stepnumber=1,                    
+% 	stringstyle=\color{mymauve},     
+% 	title=\lstname                   
+% }
+
+% \theoremstyle{definition}
+% \newtheorem{mydef}{Definicija} [chapter]
+% \newtheorem{myexp}{Primjer} [chapter]
+% \newtheorem{myteo}{Teorem} [chapter]
+% \newtheorem{mypro}{Dokaz} [chapter]
+% \makeatletter
+% \newcommand{\newalgname}[1]{%
+% 	\renewcommand{\ALG@name}{#1}%
+% }
+
+% \renewcommand{\tablename}{Tabela}
+% \newalgname{Algoritam}
+% \renewcommand{\listalgorithmname}{Lista\ALG@name s}
+% \makeatother
+
+\begin{document}
+	\begin{titlepage}
+		\newcommand{\HRule}{\rule{\linewidth}{1mm}} 
+		\noindent
+		{\large
+			\begin{minipage}{0.2\textwidth}
+				\begin{center} 
+					\includegraphics[width=0.7\textwidth]{unsa.jpg}
+				\end{center}
+			\end{minipage}
+			\begin{minipage}{0.58\textwidth}
+				\begin{center} \large
+					Univerzitet u Sarajevu\\
+					Elektrotehnički fakultet u Sarajevu\\
+					Odsjek za računarstvo i informatiku\\
+				\end{center}
+			\end{minipage}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center} 
+					\includegraphics[width=0.7\textwidth]{ETF_logo.png}
+				\end{center}
+			\end{minipage}
+			\\[6 cm] 
+			
+			
+			\begin{center}
+				\LARGE 
+				\bfseries 
+				ReadTheWorld \\
+				\large 
+				Specifikacija projektnog zadatka   \\[0.5cm]
+				
+				Objektno orijentisana analiza i dizajn
+				\\[6.0 cm] 
+			\end{center}	 		
+			
+
+			\begin{minipage}{0.9\textwidth}
+				\begin{flushright}
+					\textbf{Iris Pjanić}  \\
+					\textbf{Adna Husičić}  \\			
+					\textbf{Mirza Kadrić}  \\
+				\end{flushright}
+			\end{minipage}\\[1 cm]
+		}
+	\end{titlepage}
+	\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\begin{flushleft}
+{\Large \textbf{Writely}} \newline \newline
+
+\large  
+\textbf{Opis i namjena sistema} \newline
+Writely je aplikacija koja ima za cilj povezati sve zaljubljenike u književnost u jedinstvenu mrežu. Aplikacija je edukativnog i zabavnog karaktera, jer nudi mogućnost interakcije između korisnika koji čitaju i korisnika koji objavljuju svoje literarne radove. Svaki korisnik (bio registrovan ili ne) može čitati radove drugih korisnika, a za registrovane korisnike dostupne su mnoge druge opcije poput objavljivanja vlastitih radova i recenzije radova drugih korisnika. Bez obzira na to koliko ste iskusni u objavljivanju radova ili koji stil pisanja preferirate, vaši radovi će uvijek naći publiku na našoj aplikaciji. Za najambicioznije autore, tu je i mogućnost prijave na književna takmičenja iz različitih kategorija, gdje mogu uporediti svoje vještine pisanja u odnosu na druge. \newline
+
+\textbf{Guest korisnik}
+\begin{itemize}
+    \item Pretraživanje i čitanje radova 
+    \item Registracija i kreiranje profila \newline
+\end{itemize}
+
+\textbf{Registrovani korisnik}
+\begin{itemize}
+   \item Pretraživanje i čitanje radova drugih korisnika 
+   \item Objavljivanje sadržaja 
+   \item Ocjenjivanje i komentarisanje sadržaja drugih korisnika 
+   \item Uređivanje vlastitog profila 
+%   \item Slanje poruka drugim korisnicima 
+   \item Prijavljivanje korisnika 
+   \item Prijavljivanje problema Administratoru 
+   \item Učestvovanje na takmičenjima \newline
+\end{itemize}
+
+\textbf{Administrator}
+\begin{itemize}
+    \item Objavljivanje obavještenja za korisnike 
+    \item Brisanje sadržaja
+    \item Brisanje korisnika
+    \item Kreiranje takmičenja 
+    \item Pravila zajednice     \newline
+\end{itemize}
+
+\textbf{\underline{Funkcionalnosti}} \newline
+
+\textbf{Registracija i uređivanje vlastitog profila} \\
+Svaki neregistrovani korisnik može kreirati novi račun unoseći potrebne podatke: ime i prezime, e-mail adresa, korisničko ime i lozinka. Nakon kreiranja profila, korisniku se daje mogućnost uređivanja profila kroz postavljanje profilne fotografije, dodavanja kratkog opisa, itd.
+Korisnik dobija obavijesti o svojim radovima (kada mu drugi korisnici ocijene rad ili ostave komentar). \newline
+
+\textbf{Pretraživanje i čitanje radova} \\
+Ulaskom u aplikaciju korisniku (guest i registrovanom korisniku) se prikazuje interfejs sa osnovnim funkcionalnostima: pretraživanje radova na osnovu ključnih riječi, naziv djela, žanr, naziv autora; news feed koji prikazuje najnovije objavljene radove; rubrika sa najbolje ocijenjenim radovima mjeseca.
+Korisnik može sortirati radove na osnovu različitih kriterija poput datuma objave, prosječne ocjene, itd.
+Podrazumijevano sortiranje se vrši na osnovu algoritma koji pored prosječne ocjene rada uzima u obzir i broj recenzija. \newline
+
+\textbf{Objavljivanje sadržaja} \\
+Registrovani korisnik ima mogućnost objave vlastitog rada, pri čemu pored unosa osnovnih podataka o djelu (naziv, žanr, tagovi) može izvršiti upload file-ova (dokumenata) sa uređaja ili slike uslikane preko kamere. Zatim se vrši validacija unesenih vrijednosti, te u slučaju neispravnih podataka odbija se korisnikov zahtjev za objavljivanjem. \newline
+
+\textbf{Ocjenjivanje i komentarisanje sadržaja drugih korisnika} \\
+Registrovani korisnik pri pregledu određenog rada može ocijeniti rad i ostaviti recenziju u vidu komentara, držeći se pravila zajednice. \newline
+
+% \textbf{Slanje poruka drugim korisnicima} \\
+% Svi registrovani korisnici u mogućnosti su slati poruke jedni drugima, razmjenjujući iskustva i preporuke za dalje čitanje. Pri slanju poruka, korisnik se mora držati pravila koja vrijede i za komentarisanje, u suprotnom je primalac dužan prijaviti Administratoru korisnika koji krši pravila zajednice. Osim slanja tekstualnih poruka, korisnik ima opciju slanja slike uslikane preko kamere ili audio zapisa snimljenog pomoću mikrofona. Poruke će se prikazivati kao pop-up obavijesti.
+% \newline
+
+\textbf{Prijavljivanje rada} \\
+U slučaju da korisnik primjeti objavljen rad koji na bilo koji način krši pravila zajednice, može prijaviti rad Administratoru uz obavezno navođenje razloga prijave rada. \newline
+
+\textbf{Brisanje sadržaja} \\
+Ako Administrator dobije prijavu (pritužbu) na neki rad ili nekog korisnika, i ako utvrdi sumnje koje je korisnik podnosilac prijave naveo, u mogućnosti je trajno obrisati rad prijavljenog korisnika ili privremeno blokirati korisnika (blokirati objavljivanje i komentarisanje radova). Nakon eventualnog blokiranja korisnika, Administrator može poslati obavještenje blokiranom korisniku o razlogu blokiranja. Kada istekne vrijeme blokiranja korisnika zadano od strane Administratora, automatski će se omogućiti ponovno objavljivanje i komentarisanje za korisnika. \newline
+
+\textbf{Prijavljivanje korisnika} \\
+Ako korisnik uoči kršenje pravila zajednice od strane drugog korisnika (neprimjereni komentari i slično) u mogućnosti je prijaviti korisnika Administratoru uz obavezno navođenje razloga prijave. \newline
+
+\textbf{Brisanje korisnika} \\
+Pored brisanja korisnikovog sadržaja, Administrator može trajno obrisati korisnikog nalog u slučaju da utvrdi da je korisnik prekršio neka od pravila zajednice te mu time zauvijek onemogućiti objavljivanje ili komentarisanje radova. U tom slučaju, korisnik bi pri login-u dobio obavijest o obrisanom računu uz razlog brisanja. Tada korisnik može pristupiti aplikaciji samo kao guest. \newline
+
+\textbf{Kreiranje takmičenja}
+Administrator ima opciju da kreira takmičenje za korisnike pri čemu se zadaje tema rada, žanr te rok za predaju radova. Nakon kreiranja, korisnici će dobiti obavijest o takmičenju kako bi mogli na vrijeme napisati rad i predati ga u zadanom roku. \newline
+
+\textbf{Učestvovanje na takmičenjima} \\
+Nakon što Administrator kreira takmičenje, sistem obavještava korisnike o aktiviranom takmičenju i roku za slanje vlastith radova na datu temu. Takmičenje je opcionalno. Nakon što se korisnik prijavi na takmičenje sa svojim radom, dalju kontrolu nad procesom takmičenja preuzima Administrator. Svi takmičari će po okončanju takmičenja dobiti obavijest o najboljim radovima odabranim od Administratora, te će lista tih radova biti objavljena u posebnoj rubrici "Takmičenje" na glavnom interfejsu. \newline
+
+\textbf{Prijavljivanje problema Administratoru} \\
+Ako korisnik uoči bilo kakav problem ili grešku u ponašanju sistema, istu može prijaviti Administratoru uz obavezno navođenje informacija o problemu (mjesto i vrijeme nastanka problema, učestalost itd). \newline
+
+\textbf{Objavljivanje obavještenja za korisnike} \\
+Administrator ima mogućnost objavljivanja obavještenja koja će biti vidljiva svim korisnicima i koja će se pojavljivati kao pop-up prozorčić tj. obavijest, a koja mogu biti vezana kako za sistem (ispravke bugova ili uvođenje nekih novosti), tako i za zajednicu (najave za takmičenja). \newline
+
+\textbf{Pravila zajednice} \\
+Administrator ima kontrolu nad "dokumentacijom zajednice" - skupom pravila koja vrijede za sve korisnike sistema (pravila vezana za objavljivanje i komentarisanje radova). Administrator može uređivati taj dokument dodavajući nova ili mijenjajući već postavljena pravila (naravno, učestalo mijenjanje neće biti omogućeno zbog konzistentnosti). \newline
+
+\textbf{\underline{Nefunkcionalni zahtjevi}} \newline
+
+\textbf{Prikaz dodatnih informacija (additional info) o radu} \\
+Prilikom listanja radova, prelaskom kursorom preko određenog rada, korisniku se automatski prikazuju dodatne informacije o djelu (prosječna ocjena, broj recenzija itd). \newline
+
+\textbf{Dostupnost Web i Desktop verzije} \\
+U ovisnosti šta korisnik preferira, aplikacija je dostupna u Desktop verziji kao i na Webu. \newline
+
+\textbf{Jednostavnost korištenja aplikacije} \\
+Interfejs aplikacije je jednostavan za korištenje; Uz lijep raspored kontrola korisnicima će biti omogućeno fluidno kretanje kroz aplikaciju. \newline
+
+\textbf{Zaštita privatnosti korisnika} \\
+Korisnicma se garantuje zaštita njihovih podataka - bilo koji privatan sadržaj korisnika bit će dostupan samo njemu i Administratoru sistema. \newline
+
+\textbf{Garancija ažurnosti podataka} \\
+Sistem garantuje ažurnost informacija prikazanih na korisničkom interfejsu - aplikacija će prikazivati najnovije stanje nakon refreshanja stranice u slučaju novih zahtjeva ka sistemu (nova ocjena ili komentar). \newline
+
+
+
+
+
+
+\end{flushleft}
+\end{document}
