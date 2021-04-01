@@ -2106,12 +2106,12 @@
 										"$ref": "AAAAAAF4eLVcO7YbtbU="
 									},
 									"font": "Arial;13;0",
-									"left": 204,
+									"left": 240,
 									"top": 1072,
 									"width": 73.7216796875,
 									"height": 13,
-									"alpha": 2.76108528940876,
-									"distance": 10.770329614269007,
+									"alpha": 1.8157748174618815,
+									"distance": 41.23105625617661,
 									"hostEdge": {
 										"$ref": "AAAAAAF4eLVcO7YcdsM="
 									},
@@ -3149,11 +3149,11 @@
 									},
 									"font": "Arial;13;0",
 									"left": 333,
-									"top": 337,
+									"top": 328,
 									"width": 21.68359375,
 									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 15,
+									"alpha": 2.1910453360511513,
+									"distance": 17.204650534085253,
 									"hostEdge": {
 										"$ref": "AAAAAAF4frgRuLgQ3uY="
 									},
@@ -3315,70 +3315,6 @@
 							"propertyLabel": {
 								"$ref": "AAAAAAF4frhRfrgndmQ="
 							}
-						},
-						{
-							"_type": "UMLFrameView",
-							"_id": "AAAAAAF4friMg7g0uhw=",
-							"_parent": {
-								"$ref": "AAAAAAF4eFCR27MIlcU="
-							},
-							"model": {
-								"$ref": "AAAAAAF4eFdA3rOX/2A="
-							},
-							"subViews": [
-								{
-									"_type": "LabelView",
-									"_id": "AAAAAAF4friMg7g1rIw=",
-									"_parent": {
-										"$ref": "AAAAAAF4friMg7g0uhw="
-									},
-									"font": "Arial;13;0",
-									"left": 75,
-									"top": 437,
-									"width": 68.91357421875,
-									"height": 13,
-									"text": "Registracija"
-								},
-								{
-									"_type": "LabelView",
-									"_id": "AAAAAAF4friMhLg283w=",
-									"_parent": {
-										"$ref": "AAAAAAF4friMg7g0uhw="
-									},
-									"font": "Arial;13;1",
-									"left": 69,
-									"top": 437,
-									"width": 1,
-									"height": 13
-								}
-							],
-							"font": "Arial;13;0",
-							"left": 64,
-							"top": 432,
-							"width": 102.41357421875,
-							"height": 53,
-							"nameLabel": {
-								"$ref": "AAAAAAF4friMg7g1rIw="
-							},
-							"frameTypeLabel": {
-								"$ref": "AAAAAAF4friMhLg283w="
-							}
-						},
-						{
-							"_type": "UMLNoteLinkView",
-							"_id": "AAAAAAF4frjXF7g9sRQ=",
-							"_parent": {
-								"$ref": "AAAAAAF4eFCR27MIlcU="
-							},
-							"font": "Arial;13;0",
-							"head": {
-								"$ref": "AAAAAAF4friMg7g0uhw="
-							},
-							"tail": {
-								"$ref": "AAAAAAF4frfgDrf2cCg="
-							},
-							"lineStyle": 1,
-							"points": "287:440;166:453"
 						}
 					]
 				}
