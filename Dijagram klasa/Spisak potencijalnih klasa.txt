@@ -1,0 +1,14 @@
+Potencijalne klase: 
+
+- Korisnik 
+- Guest korisnik
+- Registrovani korisnik
+- Administrator
+- Rad
+- Račun
+- Obavijest
+- Recenzija
+- Prijava
+- PrijavaRada
+- PrijavaKorisnika
+- Takmičenje
