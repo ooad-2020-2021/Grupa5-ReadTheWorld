@@ -11894,13 +11894,30 @@
 											"height": 13,
 											"text": "Pro",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAF5LuBahGcVDlU=",
+											"_parent": {
+												"$ref": "AAAAAAF5Lp1yf2ItpZ4="
+											},
+											"model": {
+												"$ref": "AAAAAAF5LuBaWmbogoY="
+											},
+											"font": "Arial;13;0",
+											"left": 1661,
+											"top": 776,
+											"width": 126,
+											"height": 13,
+											"text": "Award Winner",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1656,
 									"top": 726,
 									"width": 136,
-									"height": 53
+									"height": 68
 								}
 							],
 							"font": "Arial;13;0",
@@ -11908,7 +11925,7 @@
 							"left": 1656,
 							"top": 688,
 							"width": 136,
-							"height": 91,
+							"height": 106,
 							"nameCompartment": {
 								"$ref": "AAAAAAF5Lp1yfmIkDCI="
 							},
@@ -14598,6 +14615,14 @@
 								"$ref": "AAAAAAF5Lp1yfWIhh9E="
 							},
 							"name": "Pro"
+						},
+						{
+							"_type": "UMLEnumerationLiteral",
+							"_id": "AAAAAAF5LuBaWmbogoY=",
+							"_parent": {
+								"$ref": "AAAAAAF5Lp1yfWIhh9E="
+							},
+							"name": "Award Winner"
 						}
 					]
 				}
