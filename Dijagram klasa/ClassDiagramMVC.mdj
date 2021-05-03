@@ -13293,7 +13293,7 @@
 											"font": "Arial;13;1",
 											"left": 1173,
 											"top": 1447,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "KorisnikController"
 										},
@@ -13328,7 +13328,7 @@
 									"font": "Arial;13;0",
 									"left": 1168,
 									"top": 1440,
-									"width": 217.46044921875,
+									"width": 257,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF5MzMvkmkUTRs="
@@ -13365,7 +13365,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1470,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+trenutniKorisnik: Korisnik",
 											"horizontalAlignment": 0
@@ -13374,7 +13374,7 @@
 									"font": "Arial;13;0",
 									"left": 1168,
 									"top": 1465,
-									"width": 217.46044921875,
+									"width": 257,
 									"height": 23
 								},
 								{
@@ -13399,7 +13399,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1493,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+prikažiAktuelnaTakmičenja()",
 											"horizontalAlignment": 0
@@ -13416,9 +13416,9 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1508,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
-											"text": "+prikažiTakmičenjeInfo()",
+											"text": "+prikažiTakmičenjeInfo(t: Takmičenje)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13433,7 +13433,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1523,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+dodajRad()",
 											"horizontalAlignment": 0
@@ -13450,9 +13450,9 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1538,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
-											"text": "+prijaviSeNaTakmičenje()",
+											"text": "+prijaviSeNaTakmičenje(t: Takmičenje)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13467,7 +13467,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1553,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+otvoriMojProfil()",
 											"horizontalAlignment": 0
@@ -13484,7 +13484,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1568,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+otvoriProfil(korisnik: Korisnik)",
 											"horizontalAlignment": 0
@@ -13501,7 +13501,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1583,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+promijeniWritelyMoto(moto: String)",
 											"horizontalAlignment": 0
@@ -13518,7 +13518,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1598,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+postaviAktuelnuTitulu(titula: Titula)",
 											"horizontalAlignment": 0
@@ -13535,7 +13535,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1613,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+prikažiMojeRadove()",
 											"horizontalAlignment": 0
@@ -13552,9 +13552,9 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1628,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
-											"text": "+obrišiRad()",
+											"text": "+obrišiRad(rad: Rad)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13569,7 +13569,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1643,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+dodajProfilnuSliku()",
 											"horizontalAlignment": 0
@@ -13586,7 +13586,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1658,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+prikažiNovost()",
 											"horizontalAlignment": 0
@@ -13603,7 +13603,7 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1673,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
 											"text": "+prijaviRad(rad: Rad)",
 											"horizontalAlignment": 0
@@ -13620,16 +13620,16 @@
 											"font": "Arial;13;0",
 											"left": 1173,
 											"top": 1688,
-											"width": 207.46044921875,
+											"width": 247,
 											"height": 13,
-											"text": "+prijaviKorisnika()",
+											"text": "+prijaviKorisnika(korisnik: Korisnik)",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1168,
 									"top": 1488,
-									"width": 217.46044921875,
+									"width": 257,
 									"height": 218
 								},
 								{
@@ -13669,7 +13669,7 @@
 							"containerChangeable": true,
 							"left": 1168,
 							"top": 1440,
-							"width": 217.46044921875,
+							"width": 257,
 							"height": 266,
 							"nameCompartment": {
 								"$ref": "AAAAAAF5MzMvkmkTXYc="
@@ -14516,8 +14516,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1455,
-									"top": 1748,
+									"left": 1465,
+									"top": 1752,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -14537,8 +14537,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1466,
-									"top": 1738,
+									"left": 1477,
+									"top": 1743,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -14558,8 +14558,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1432,
-									"top": 1767,
+									"left": 1442,
+									"top": 1771,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -14577,7 +14577,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1385:1697;1503:1831",
+							"points": "1404:1706;1504:1831",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M4SuJ4g4XAg="
@@ -14610,8 +14610,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1392,
-									"top": 1783,
+									"left": 1399,
+									"top": 1784,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -14631,8 +14631,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1406,
-									"top": 1777,
+									"left": 1413,
+									"top": 1778,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -14652,8 +14652,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1365,
-									"top": 1796,
+									"left": 1372,
+									"top": 1795,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -14671,7 +14671,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1338:1706;1421:1887",
+							"points": "1350:1706;1423:1887",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M4TVPYwZQI4="
@@ -15162,7 +15162,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1826,
+									"left": 1827,
 									"top": 1012,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -15183,7 +15183,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1837,
+									"left": 1838,
 									"top": 1022,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -15204,7 +15204,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1805,
+									"left": 1804,
 									"top": 991,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -15223,7 +15223,7 @@
 								"$ref": "AAAAAAF4xQa5DWBJ8ac="
 							},
 							"lineStyle": 1,
-							"points": "1746:849;1816:1008;1385:1458",
+							"points": "1746:849;1816:1008;1419:1439",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M5zyxAkVY0U="
@@ -15256,8 +15256,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1306,
-									"top": 1760,
+									"left": 1312,
+									"top": 1761,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -15277,8 +15277,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1321,
-									"top": 1759,
+									"left": 1327,
+									"top": 1761,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -15298,8 +15298,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1277,
-									"top": 1763,
+									"left": 1283,
+									"top": 1762,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -15317,7 +15317,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1287:1706;1297:1831",
+							"points": "1297:1706;1299:1831",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M51ubhP44Tw="
@@ -15844,8 +15844,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1025,
-									"top": 1776,
+									"left": 1024,
+									"top": 1783,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -15865,8 +15865,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1034,
-									"top": 1788,
+									"left": 1033,
+									"top": 1795,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -15886,8 +15886,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1006,
-									"top": 1753,
+									"left": 1007,
+									"top": 1758,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -15905,7 +15905,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1167:1656;865:1887",
+							"points": "1167:1667;866:1887",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M8V//2OlrwE="
@@ -15938,8 +15938,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1117,
-									"top": 1777,
+									"left": 1122,
+									"top": 1779,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -15959,8 +15959,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1129,
-									"top": 1787,
+									"left": 1133,
+									"top": 1789,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -15980,8 +15980,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1094,
-									"top": 1758,
+									"left": 1099,
+									"top": 1760,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -15999,7 +15999,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1167:1702;1046:1847",
+							"points": "1175:1706;1048:1847",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M8WSAWTHKj4="
@@ -16478,7 +16478,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1223,
+									"left": 1230,
 									"top": 1794,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -16499,8 +16499,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1237,
-									"top": 1798,
+									"left": 1244,
+									"top": 1799,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -16520,7 +16520,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1194,
+									"left": 1201,
 									"top": 1785,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -16539,7 +16539,7 @@
 								"$ref": "AAAAAAF5MzMvkmkS1S4="
 							},
 							"lineStyle": 1,
-							"points": "1236:1706;1183:1887",
+							"points": "1248:1706;1184:1887",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF5M8u0ORr98ec="
@@ -19334,7 +19334,20 @@
 							"_parent": {
 								"$ref": "AAAAAAF5MzMvkGkQ2Cg="
 							},
-							"name": "prikažiTakmičenjeInfo"
+							"name": "prikažiTakmičenjeInfo",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF5NBznQhNHRyc=",
+									"_parent": {
+										"$ref": "AAAAAAF5M07w8U7gSeQ="
+									},
+									"name": "t",
+									"type": {
+										"$ref": "AAAAAAF4wfv8A0QF+3w="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -19350,7 +19363,20 @@
 							"_parent": {
 								"$ref": "AAAAAAF5MzMvkGkQ2Cg="
 							},
-							"name": "prijaviSeNaTakmičenje"
+							"name": "prijaviSeNaTakmičenje",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF5NB26liLWsUE=",
+									"_parent": {
+										"$ref": "AAAAAAF5M1GqJHZkqmI="
+									},
+									"name": "t",
+									"type": {
+										"$ref": "AAAAAAF4wfv8A0QF+3w="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -19435,7 +19461,20 @@
 							"_parent": {
 								"$ref": "AAAAAAF5MzMvkGkQ2Cg="
 							},
-							"name": "obrišiRad"
+							"name": "obrišiRad",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF5NBygtxJaDUw=",
+									"_parent": {
+										"$ref": "AAAAAAF5M133nR4Sx8Y="
+									},
+									"name": "rad",
+									"type": {
+										"$ref": "AAAAAAF4wc0mhD5qnb4="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -19480,7 +19519,20 @@
 							"_parent": {
 								"$ref": "AAAAAAF5MzMvkGkQ2Cg="
 							},
-							"name": "prijaviKorisnika"
+							"name": "prijaviKorisnika",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF5NBxlcBFt+80=",
+									"_parent": {
+										"$ref": "AAAAAAF5NAmap79f7uY="
+									},
+									"name": "korisnik",
+									"type": {
+										"$ref": "AAAAAAF4wb2YNj12bO4="
+									}
+								}
+							]
 						}
 					]
 				},
