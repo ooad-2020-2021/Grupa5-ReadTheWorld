@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,19 +14,28 @@ namespace Writely.Models
         #region Properties
 
         [Required]
+        [StringLength(maximumLength: 25, MinimumLength = 0, ErrorMessage = "Ime korisnika ne smije biti duže od 25 karaktera!")]
+        [RegularExpression(@"[ |a-z|A-Z]*",
+         ErrorMessage = "Dozvoljeno je samo korištenje velikih i malih slova i razmaka!")]
+        [DisplayName("Ime i prezime:")]
         public string ImePrezime { get; set; }
 
         [Required]
+        [DisplayName("Datum registracije:")]
         public DateTime DatumRegistracije { get; set; }
 
         [NotMapped]
+        [DisplayName("Radovi:")]
         public List<Rad> ObjavljeniRadovi { get; set; }
 
         [NotMapped]
+        [DisplayName("Dodijeljene titule:")]
         public List<Titula> DodijeljeneTitule { get; set; }
 
+        [DisplayName("Aktuelna titula:")]
         public Titula AktuelnaTitula { get; set; }
 
+        [DisplayName("Writely moto:")]
         public string WritelyMoto { get; set; }
 
         #endregion

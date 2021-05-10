@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,25 +11,30 @@ namespace Writely.Models
     {
         #region Properties
         [Required]
-        public Ocjena ocjena { get; set; }
+        [DisplayName("Ocjena:")]
+        [Range(1, 5, ErrorMessage = "Ocjena mora biti između 1 i 5!")]
+        public int ocjena { get; set; }
 
+        [StringLength(maximumLength: 500, MinimumLength = 0, ErrorMessage = "Komentar ne smije biti duži od 500 karaktera!")]
+        [DisplayName("Komentar:")]
         public string Komentar { get; set; }
 
         [Required]
+        [DisplayName("Korisnik:")]
         public Korisnik Korisnik { get; set; }
 
         #endregion
 
         #region Konstruktor
 
-        Recenzija (Ocjena ocjena, string komentar, Korisnik korisnik)
+        Recenzija (int ocjena, string komentar, Korisnik korisnik)
         {
             this.ocjena = ocjena;
             this.Komentar = komentar;
             this.Korisnik = korisnik;
         }
 
-        Recenzija(Ocjena ocjena, Korisnik korisnik)
+        Recenzija(int ocjena, Korisnik korisnik)
         {
             this.ocjena = ocjena;
             this.Komentar = "";

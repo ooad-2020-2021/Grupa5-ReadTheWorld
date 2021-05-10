@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,18 +12,23 @@ namespace Writely.Models
         #region Properties 
 
         [Required]
+        [StringLength(maximumLength: 20, MinimumLength = 0, ErrorMessage = "Naziv prijave ne smije biti duži od 20 karaktera!")]
+        [DisplayName("Naziv prijave:")]
         public string Naziv { get; set; }
 
         [Required]
+        [DisplayName("Sadržaj prijave:")]
         public string Sadržaj { get; set; }
         
         [Required]
         public Korisnik Pošiljalac { get; set; }
 
         [Required]
+        [DisplayName("Status:")]
         public StatusPrijave Status { get; set; }
 
         [Required]
+        [DisplayName("Datum prijave:")]
         public DateTime DatumPrijave { get; set; }
 
         #endregion
