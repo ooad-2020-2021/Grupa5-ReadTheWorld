@@ -24,10 +24,12 @@ namespace Writely.Models
         public Korisnik Pošiljalac { get; set; }
 
         [Required]
+        [EnumDataType(typeof(StatusPrijave))]
         [DisplayName("Status:")]
         public StatusPrijave Status { get; set; }
 
         [Required]
+        [DataType]
         [DisplayName("Datum prijave:")]
         public DateTime DatumPrijave { get; set; }
 

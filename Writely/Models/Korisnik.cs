@@ -21,18 +21,17 @@ namespace Writely.Models
         public string ImePrezime { get; set; }
 
         [Required]
+        [DataType]
         [DisplayName("Datum registracije:")]
         public DateTime DatumRegistracije { get; set; }
 
-        [NotMapped]
-        [DisplayName("Radovi:")]
-        public List<Rad> ObjavljeniRadovi { get; set; }
 
         [NotMapped]
         [DisplayName("Dodijeljene titule:")]
         public List<Titula> DodijeljeneTitule { get; set; }
 
         [DisplayName("Aktuelna titula:")]
+        [EnumDataType(typeof(Titula))]
         public Titula AktuelnaTitula { get; set; }
 
         [DisplayName("Writely moto:")]

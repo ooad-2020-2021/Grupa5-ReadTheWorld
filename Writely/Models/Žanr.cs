@@ -7,6 +7,6 @@ namespace Writely.Models
 {
     public enum Žanr
     {
-        Komedija, Horor, SciFi, Drama
+        [Display(Name = "Komedija")] Komedija, [Display(Name = "Horor")] Horor, [Display(Name = "SciFi")]  SciFi, [Display(Name = "Drama")] Drama
     }
 }

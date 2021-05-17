@@ -22,16 +22,19 @@ namespace Writely.Models
 
         [Required]
         [DisplayName("Žanr:")]
+        [EnumDataType (typeof(Žanr))]
         public Žanr žanr { get; set; }
 
         [Required]
         [DisplayName("Kategorija:")]
+        [EnumDataType (typeof(Kategorija))]
         public Kategorija kategorija { get; set; }
 
         [Required]
         public string Sadržaj { get; set; }
 
         [Required]
+        [DataType]
         [DisplayName("Datum objave:")]
         public DateTime DatumObjave { get; set; }
 
@@ -39,9 +42,7 @@ namespace Writely.Models
         [DisplayName("Tagovi:")]
         public List<string> tagovi { get; set; }
 
-        [NotMapped]
-        [DisplayName("Recenzije:")]
-        public List<Recenzija> recenzije { get; set; }
+        
         #endregion
 
         #region Konstruktor

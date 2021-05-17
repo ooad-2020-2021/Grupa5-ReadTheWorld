@@ -23,6 +23,12 @@ namespace Writely.Models
         [DisplayName("Korisnik:")]
         public Korisnik Korisnik { get; set; }
 
+        [Required]
+        [DisplayName("Rad:")]
+        public Rad OcijenjeniRad { get; set; }
+
+
+
         #endregion
 
         #region Konstruktor

@@ -7,6 +7,6 @@ namespace Writely.Models
 {
     public enum Kategorija
     {
-        Poezija, Esej, KratkaPriča, Strip
+        [Display(Name = "Poezija")] Poezija, [Display(Name = "Esej")] Esej, [Display(Name = "Kratka priča")] KratkaPriča, [Display(Name = "Strip")]  Strip
     }
 }

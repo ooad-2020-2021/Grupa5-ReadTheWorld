@@ -7,6 +7,6 @@ namespace Writely.Models
 {
     public enum Titula
     {
-        Newbie, Intermediate, Pro, AwardWinner
+        [Display(Name = "Newbie")] Newbie, [Display(Name = "intermediate")]  Intermediate, [Display(Name = "Pro")]  Pro, [Display(Name = "Award Winner")] AwardWinner
     }
 }

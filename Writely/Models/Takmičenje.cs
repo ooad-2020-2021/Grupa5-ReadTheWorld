@@ -17,10 +17,12 @@ namespace Writely.Models
         public string   Naziv { get; set; }
 
         [Required]
+        [DataType]
         [DisplayName("Datum početka:")]
         public DateTime DatumPocetka { get; set; }
 
         [Required]
+        [DataType]
         [DisplayName("Datum kraja:")]
         public DateTime DatumKraja { get; set; }
 

@@ -7,6 +7,6 @@ namespace Writely.Models
 {
     public enum StatusPrijave
     {
-        NaČekanju, Obrađena, Odbijena
+        [Display(Name = "Na čekanju")] NaČekanju, [Display(Name = "Obrađena")]  Obrađena, [Display(Name = "Odbijena")] Odbijena
     }
 }
