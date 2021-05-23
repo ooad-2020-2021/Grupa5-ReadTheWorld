@@ -29617,7 +29617,7 @@
 												"$ref": "AAAAAAF5loynv9wE/+w="
 											},
 											"edgePosition": 1,
-											"text": "5 : validniPodaci(): Boolean"
+											"text": "5 : validniPodaci: Bool"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -30216,9 +30216,9 @@
 												"$ref": "AAAAAAF5lXLCqyrFON4="
 											},
 											"font": "Arial;13;0",
-											"left": 250,
+											"left": 213,
 											"top": 458,
-											"width": 72.2490234375,
+											"width": 147.1513671875,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -30226,7 +30226,7 @@
 												"$ref": "AAAAAAF5lXLCrCrGHV8="
 											},
 											"edgePosition": 1,
-											"text": "10 : prijava()"
+											"text": "10 : prijava(): PrijavaView"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -30376,7 +30376,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF5lUk98wpI+y0="
 							},
-							"name": "validniPodaci(): Boolean",
+							"name": "validniPodaci: Bool",
 							"source": {
 								"$ref": "AAAAAAF5lVS8FRrtMMk="
 							},
@@ -30451,7 +30451,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF5lUk98wpI+y0="
 							},
-							"name": "prijava()",
+							"name": "prijava(): PrijavaView",
 							"source": {
 								"$ref": "AAAAAAF5lUnlmwtt3E8="
 							},
@@ -30607,9 +30607,9 @@
 												"$ref": "AAAAAAF5lYsFzu3H3TI="
 											},
 											"font": "Arial;13;0",
-											"left": 160.72998046875,
+											"left": 158.55908203125,
 											"top": 37,
-											"width": 58.79541015625,
+											"width": 54.44091796875,
 											"height": 13,
 											"text": "PrijavaDS"
 										},
@@ -30622,7 +30622,7 @@
 											"font": "Arial;13;1",
 											"left": 141,
 											"top": 37,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
