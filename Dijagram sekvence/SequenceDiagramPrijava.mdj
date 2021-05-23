@@ -29719,9 +29719,9 @@
 												"$ref": "AAAAAAF5lo1dctw40UA="
 											},
 											"font": "Arial;13;0",
-											"left": 439,
+											"left": 421,
 											"top": 290,
-											"width": 192.18798828125,
+											"width": 228.29345703125,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -29729,7 +29729,7 @@
 												"$ref": "AAAAAAF5lo1dctw5anY="
 											},
 											"edgePosition": 1,
-											"text": "6 : zahtjevZaRačunomKorisnika()"
+											"text": "6 : dajRačunZaKorisnika(k: Korisnik)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -29830,9 +29830,9 @@
 												"$ref": "AAAAAAF5lWnavE4kA5g="
 											},
 											"font": "Arial;13;0",
-											"left": 742,
+											"left": 720,
 											"top": 302,
-											"width": 166.16259765625,
+											"width": 210.9326171875,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -29840,7 +29840,7 @@
 												"$ref": "AAAAAAF5lWnavU4lmw0="
 											},
 											"edgePosition": 1,
-											"text": "7 : kreirajCtrlZaKorisnika()"
+											"text": "7 : kreirajCtrlZaKorisnika(k: Korisnik)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -30391,7 +30391,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF5lUk98wpI+y0="
 							},
-							"name": "zahtjevZaRačunomKorisnika()",
+							"name": "dajRačunZaKorisnika(k: Korisnik)",
 							"source": {
 								"$ref": "AAAAAAF5lUnlmwtt3E8="
 							},
@@ -30405,7 +30405,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF5lUk98wpI+y0="
 							},
-							"name": "kreirajCtrlZaKorisnika()",
+							"name": "kreirajCtrlZaKorisnika(k: Korisnik)",
 							"source": {
 								"$ref": "AAAAAAF5lVS8FRrtMMk="
 							},
