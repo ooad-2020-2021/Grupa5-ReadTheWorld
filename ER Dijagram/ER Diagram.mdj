@@ -30301,7 +30301,6 @@
 							"name": "žanr",
 							"type": "INTEGER",
 							"length": 0,
-							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAF5mY6o433rJGs="
 							}
@@ -30315,7 +30314,6 @@
 							"name": "kategorija",
 							"type": "INTEGER",
 							"length": 0,
-							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAF5mY5xA3x1Taw="
 							}
@@ -30556,7 +30554,6 @@
 							"name": "aktuelnaTitula",
 							"type": "INTEGER",
 							"length": 0,
-							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAF5mZB0vz7uXa8="
 							}
@@ -31150,7 +31147,6 @@
 							"name": "status",
 							"type": "INTEGER",
 							"length": 0,
-							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAF5mZA5FD1rNm0="
 							}
