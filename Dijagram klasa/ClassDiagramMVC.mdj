@@ -4292,7 +4292,7 @@
 											"top": 551,
 											"width": 542.99755859375,
 											"height": 13,
-											"text": "+takmičenje: Takmičenje",
+											"text": "-takmičenje: Takmičenje",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4609,7 +4609,7 @@
 											"top": 915,
 											"width": 301.65966796875,
 											"height": 13,
-											"text": "+rad: Rad",
+											"text": "-rad: Rad",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7399,7 +7399,7 @@
 											"top": 690,
 											"width": 317.560546875,
 											"height": 13,
-											"text": "+writelyMoto: String",
+											"text": "-writelyMoto: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -24324,6 +24324,7 @@
 								"$ref": "AAAAAAF4wc0mhD5qnb4="
 							},
 							"name": "takmičenje",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAF4wfv8A0QF+3w="
 							}
@@ -24655,6 +24656,7 @@
 								"$ref": "AAAAAAF4weqxtEClf+o="
 							},
 							"name": "rad",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAF4wc0mhD5qnb4="
 							}
@@ -25857,6 +25859,7 @@
 								"$ref": "AAAAAAF4xQa48GBHoMQ="
 							},
 							"name": "writelyMoto",
+							"visibility": "private",
 							"type": "String"
 						}
 					],
