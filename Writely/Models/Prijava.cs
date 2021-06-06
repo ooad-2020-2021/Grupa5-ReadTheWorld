@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace Writely.Models
 {
-    public class Prijava
+    public abstract class Prijava
     {
         #region Properties 
+        [Key]
+        [Required]
+        public int id { get; set; }
 
         [Required]
         [StringLength(maximumLength: 20, MinimumLength = 0, ErrorMessage = "Naziv prijave ne smije biti duži od 20 karaktera!")]
@@ -21,12 +24,20 @@ namespace Writely.Models
         public string Sadržaj { get; set; }
         
         [Required]
+        [ForeignKey ("PošiljalacId")]
         public Korisnik Pošiljalac { get; set; }
+
+        [DisplayName("Korisnik")]
+        public int PošiljalacId { get; set; }
 
         [Required]
         [EnumDataType(typeof(StatusPrijave))]
         [DisplayName("Status:")]
+        [ForeignKey("StatusId")]
         public StatusPrijave Status { get; set; }
+
+        [DisplayName("Status")]
+        public int StatusId { get; set; }
 
         [Required]
         [DataType]

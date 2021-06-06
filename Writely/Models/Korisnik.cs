@@ -8,10 +8,15 @@ using System.Threading.Tasks;
 
 namespace Writely.Models
 {
+    
     public class Korisnik
 
     {
         #region Properties
+
+        [Key]
+        [Required]
+        public int id { get; set; }
 
         [Required]
         [StringLength(maximumLength: 25, MinimumLength = 0, ErrorMessage = "Ime korisnika ne smije biti duže od 25 karaktera!")]
@@ -25,13 +30,12 @@ namespace Writely.Models
         [DisplayName("Datum registracije:")]
         public DateTime DatumRegistracije { get; set; }
 
-
-        [NotMapped]
         [DisplayName("Dodijeljene titule:")]
-        public List<Titula> DodijeljeneTitule { get; set; }
+        public string DodijeljeneTitule { get; set; }
 
         [DisplayName("Aktuelna titula:")]
         [EnumDataType(typeof(Titula))]
+        [ForeignKey("Titula")]
         public Titula AktuelnaTitula { get; set; }
 
         [DisplayName("Writely moto:")]

@@ -11,10 +11,14 @@ namespace Writely.Models
     public class Takmičenje
     {
         #region Properties
+        [Key]
         [Required]
-        [StringLength(maximumLength: 20, MinimumLength = 0, ErrorMessage = "Naziv takmičenja ne smije biti duže od 20 karaktera!")]
+        public int id { get; set; }
+
+        [Required]
+        [StringLength(maximumLength: 30, MinimumLength = 0, ErrorMessage = "Naziv takmičenja ne smije biti duže od 30 karaktera!")]
         [DisplayName("Naziv takmičenja:")]
-        public string   Naziv { get; set; }
+        public string  Naziv { get; set; }
 
         [Required]
         [DataType]
@@ -27,9 +31,8 @@ namespace Writely.Models
         public DateTime DatumKraja { get; set; }
 
         [Required]
-        [NotMapped]
         [DisplayName("Dozvoljene kategorije:")]
-        public List<Kategorija> DozvoljeneKategorije { get; set; }
+        public string DozvoljeneKategorije { get; set; }
 
         [Required]
         [DisplayName("Opis teme:")]

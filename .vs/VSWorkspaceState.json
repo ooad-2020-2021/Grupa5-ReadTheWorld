@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Writely",
+    "\\Writely\\Data",
+    "\\Writely\\Data\\Migrations",
+    "\\Writely\\Models",
+    "\\Writely\\wwwroot"
   ],
+  "SelectedNode": "\\Writely",
   "PreviewInSolutionExplorer": false
 }

@@ -10,6 +10,11 @@ namespace Writely.Models
     public class Recenzija
     {
         #region Properties
+
+        [Key]
+        [Required]
+        public int id { get; set; }
+
         [Required]
         [DisplayName("Ocjena:")]
         [Range(1, 5, ErrorMessage = "Ocjena mora biti između 1 i 5!")]
@@ -21,11 +26,19 @@ namespace Writely.Models
 
         [Required]
         [DisplayName("Korisnik:")]
+        [ForeignKey ("KorisnikId")]
         public Korisnik Korisnik { get; set; }
+        
+        [DisplayName("Korisnik")]
+        public int KorisnikId { get; set; }
 
         [Required]
+        [ForeignKey("RadId")]
         [DisplayName("Rad:")]
         public Rad OcijenjeniRad { get; set; }
+
+        [DisplayName("Rad")]
+        public int RadId { get; set; }
 
 
 

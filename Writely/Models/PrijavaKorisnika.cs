@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Writely.Models
 {
+    [Table ("PrijavaKorisnika")]
     public class PrijavaKorisnika : Prijava
     {
         #region Properties
+
         [Required]
+        [ForeignKey "KorisnikId"]
         public Korisnik PrijavljeniKorisnik{ get; set; }
+
+        [DisplayName("Status")]
+        public int KorisnikId { get; set; }
 
         #endregion
 
