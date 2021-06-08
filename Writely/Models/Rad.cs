@@ -69,10 +69,11 @@ namespace Writely.Models
         [DisplayName("Takmičenje")]
         public int TakmičenjeId  { get; set; }
 
-        
+
         #endregion
 
         #region Konstruktor
+        public Rad() { }
         public Rad(string naziv, Korisnik autor, Žanr žanr, Kategorija kategorija, string sadržaj, DateTime datumObjave, string tagovi)
         {
             this.Naziv = naziv;

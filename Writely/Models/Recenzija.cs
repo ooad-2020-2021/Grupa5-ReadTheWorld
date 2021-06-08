@@ -46,6 +46,12 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
+        public Recenzija() { }
+        public Recenzija(int ocjena, string komentar)
+        {
+            this.ocjena = ocjena;
+            this.Komentar = komentar;
+        }
 
         Recenzija (int ocjena, string komentar, Korisnik korisnik)
         {

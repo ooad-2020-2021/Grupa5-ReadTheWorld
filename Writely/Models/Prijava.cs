@@ -48,6 +48,8 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor 
+
+        public Prijava() { }
         public Prijava (string naziv, string sadrzaj, Korisnik posiljalac, DateTime datumPrijave)
         {
             this.Naziv = naziv;

@@ -31,8 +31,8 @@ namespace Writely.Data
             modelBuilder.Entity<Rad>().ToTable("Rad");
             modelBuilder.Entity<Takmičenje>().ToTable("Takmičenje");
             modelBuilder.Entity<Recenzija>().ToTable("Recenzija");
-            modelBuilder.Entity<PrijavaRada>().ToTable("PrijavaRada");
-            modelBuilder.Entity<PrijavaKorisnika>().ToTable("PrijavaKorisnika");
+           // modelBuilder.Entity<PrijavaRada>().ToTable("PrijavaRada");
+           // modelBuilder.Entity<PrijavaKorisnika>().ToTable("PrijavaKorisnika");
             modelBuilder.Entity<Prijava>().ToTable("Prijava");
 
         }

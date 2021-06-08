@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Writely.Models
 {
+  
     [Table("PrijavaRada")]
     public class PrijavaRada : Prijava
     {
@@ -23,6 +24,8 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
+
+        public PrijavaRada(): base() { }
         public PrijavaRada(string naziv, string sadrzaj, Korisnik posiljalac, DateTime datumPrijave, Rad prijavljeni) : base(naziv, sadrzaj, posiljalac, datumPrijave)
         {
             PrijavljeniRad = prijavljeni;

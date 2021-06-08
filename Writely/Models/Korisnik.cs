@@ -44,6 +44,9 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
+
+        public Korisnik() { }
+
         public Korisnik (string ime, DateTime datumRegistracije, string moto)
         {
             this.ImePrezime = ime;
