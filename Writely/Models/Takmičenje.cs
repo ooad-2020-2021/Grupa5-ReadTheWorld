@@ -21,12 +21,12 @@ namespace Writely.Models
         public string  Naziv { get; set; }
 
         [Required]
-        [DataType]
+        [DataType(DataType.Date)]
         [DisplayName("Datum početka:")]
         public DateTime DatumPocetka { get; set; }
 
         [Required]
-        [DataType]
+        [DataType(DataType.Date)]
         [DisplayName("Datum kraja:")]
         public DateTime DatumKraja { get; set; }
 
@@ -43,7 +43,7 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
-        public Takmičenje (string naziv, DateTime datumPocetka, DateTime datumKraja, List<Kategorija> dozvoljeneKategorije, string opis)
+        public Takmičenje (string naziv, DateTime datumPocetka, DateTime datumKraja, string dozvoljeneKategorije, string opis)
         {
             this.Naziv = naziv;
             this.DatumPocetka = datumPocetka;

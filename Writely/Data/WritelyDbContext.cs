@@ -3,20 +3,19 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Writely.Models;
 
 namespace Writely.Data
 {
-    public class WritelyContext : DbContext
+    public class WritelyDbContext : DbContext
     { 
-        public WritelyContext (DbContextOptions<WritelyContext> options) : base(options)
+        public WritelyDbContext (DbContextOptions<WritelyDbContext> options) : base(options)
         {
         }
 
 
-        public DbSet<Kategorija> Kategorija { get; set; }
-        public DbSet<Žanr> Žanr { get; set; }
-        public DbSet<StatusPrijave> StatusPrijave { get; set; }
-        public DbSet<Titula> Titula { get; set; }
+        
+        
         public DbSet<Korisnik> Korisnik { get; set; }
         public DbSet<Rad> Rad { get; set; }
         public DbSet<Takmičenje> Takmičenje { get; set; }
@@ -27,10 +26,7 @@ namespace Writely.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Kategorija>().ToTable("Kategorija");
-            modelBuilder.Entity<Žanr>().ToTable("Žanr");
-            modelBuilder.Entity<StatusPrijave>().ToTable("StatusPrijave");
-            modelBuilder.Entity<Titula>().ToTable("Titula");
+            
             modelBuilder.Entity<Korisnik>().ToTable("Korisnik");
             modelBuilder.Entity<Rad>().ToTable("Rad");
             modelBuilder.Entity<Takmičenje>().ToTable("Takmičenje");
@@ -42,10 +38,6 @@ namespace Writely.Data
         }
 
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-
-        }
+       
     }
 }

@@ -26,7 +26,7 @@ namespace Writely.Models
         public string ImePrezime { get; set; }
 
         [Required]
-        [DataType]
+        [DataType(DataType.Date)]
         [DisplayName("Datum registracije:")]
         public DateTime DatumRegistracije { get; set; }
 
@@ -49,24 +49,14 @@ namespace Writely.Models
             this.ImePrezime = ime;
             this.DatumRegistracije = datumRegistracije;
             this.WritelyMoto = moto;
-            this.ObjavljeniRadovi = new List<Rad>();
-            this.DodijeljeneTitule = new List<Titula>();
-            this.DodijeljeneTitule.Add(Titula.Newbie);
+            this.DodijeljeneTitule = "1";
             this.AktuelnaTitula = Titula.Newbie;
         }
 
         #endregion
 
         #region Metode
-        void dodajRad (Rad r)
-        {
-            ObjavljeniRadovi.Add(r);
-        }
-
-        void obrisiRad (Rad r)
-        {
-            ObjavljeniRadovi.Remove(r);
-        }
+       
 
 
         #endregion

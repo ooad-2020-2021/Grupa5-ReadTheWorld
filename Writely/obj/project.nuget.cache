@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C+oO+mTScYjVIEgB2vJMQdn93KZi9klMj3ZxlhmK81lFfyj5eoqhCXZrBfC5Sa8SkiFGjYVwoyk+XY5Yz7pfXw==",
+  "dgSpecHash": "q1FOkSamU0Jr4jDjQwMisM8XoOyoQg8FUikSBjwB/tje+wjmof5YqlGUjUNexzTOq6cah6EmBpoOVDjpLpugRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CpuInfotech\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+  "projectFilePath": "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CpuInfotech\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.12\\microsoft.aspnetcore.cryptography.internal.3.1.12.nupkg.sha512",
     "C:\\Users\\CpuInfotech\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.12\\microsoft.aspnetcore.cryptography.keyderivation.3.1.12.nupkg.sha512",

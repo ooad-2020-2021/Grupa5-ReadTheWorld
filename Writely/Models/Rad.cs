@@ -53,7 +53,7 @@ namespace Writely.Models
         public string Sadržaj { get; set; }
 
         [Required]
-        [DataType]
+        [DataType(DataType.Date)]
         [DisplayName("Datum objave:")]
         public DateTime DatumObjave { get; set; }
 
@@ -73,7 +73,7 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
-        public Rad(string naziv, Korisnik autor, Žanr žanr, Kategorija kategorija, string sadržaj, DateTime datumObjave, List<string> tagovi)
+        public Rad(string naziv, Korisnik autor, Žanr žanr, Kategorija kategorija, string sadržaj, DateTime datumObjave, string tagovi)
         {
             this.Naziv = naziv;
             this.Autor = autor;
@@ -82,7 +82,6 @@ namespace Writely.Models
             this.Sadržaj = sadržaj;
             this.DatumObjave = datumObjave;
             this.tagovi = tagovi;
-            this.recenzije = new List<Recenzija>();
         }
 
         public Rad(string naziv, Korisnik autor, Žanr žanr, Kategorija kategorija, string sadržaj, DateTime datumObjave)
@@ -93,8 +92,7 @@ namespace Writely.Models
             this.kategorija = kategorija;
             this.Sadržaj = sadržaj;
             this.DatumObjave = datumObjave;
-            this.tagovi = new List<string>();
-            this.recenzije = new List<Recenzija>();
+            this.tagovi = "";
 
         }
 
