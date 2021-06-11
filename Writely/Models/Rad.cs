@@ -29,7 +29,7 @@ namespace Writely.Models
         [DisplayName("Korisnik")]
         public int AutorId  { get; set; }
 
-        [Required]
+        [NotMapped]
         [DisplayName("Žanr:")]
         [EnumDataType (typeof(Žanr))]
         [ForeignKey("ŽanrId")]
@@ -37,15 +37,16 @@ namespace Writely.Models
 
         [Required]
         [DisplayName("Žanr")]
+        [ForeignKey("Kategorija")]
         public int ŽanrId  { get; set; }
 
-        [Required]
+        [NotMapped]
         [DisplayName("Kategorija:")]
         [EnumDataType (typeof(Kategorija))]
-        [ForeignKey("Kategorija")]
         public Kategorija kategorija { get; set; }
         
         [Required]
+        [ForeignKey("Kategorija")]
         [DisplayName("Kategorija")]
         public int KategorijaId  { get; set; }
 

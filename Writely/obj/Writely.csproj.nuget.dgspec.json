@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {}
+    "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {
+    "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+        "projectUniqueName": "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
         "projectName": "Writely",
-        "projectPath": "C:\\Users\\Hp\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
-        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\obj\\",
+        "projectPath": "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+        "packagesPath": "C:\\Users\\CpuInfotech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CpuInfotech\\RiderProjects\\Grupa5-ReadTheWorld\\Writely\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CpuInfotech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,8 +57,10 @@
               "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -79,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

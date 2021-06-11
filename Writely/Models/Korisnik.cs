@@ -33,6 +33,7 @@ namespace Writely.Models
         [DisplayName("Dodijeljene titule:")]
         public string DodijeljeneTitule { get; set; }
 
+        [NotMapped]
         [DisplayName("Aktuelna titula:")]
         [EnumDataType(typeof(Titula))]
         [ForeignKey("Titula")]

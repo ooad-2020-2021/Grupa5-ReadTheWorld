@@ -10,26 +10,59 @@ namespace Writely.Models
 {
   
     [Table("PrijavaRada")]
-    public class PrijavaRada : Prijava
+    public class PrijavaRada 
     {
         #region Properties
-        
-        [Required]
+
+        [NotMapped]
         [ForeignKey ("RadId")]
         public Rad PrijavljeniRad { get; set; }
 
         [DisplayName ("Rad")]
         public int RadId { get; set; }
+        
+        [Key]
+        [Required]
+        public int id { get; set; }
+
+        [Required]
+        [StringLength(maximumLength: 20, MinimumLength = 0, ErrorMessage = "Naziv prijave ne smije biti duži od 20 karaktera!")]
+        [DisplayName("Naziv prijave:")]
+        public string Naziv { get; set; }
+
+        [Required]
+        [DisplayName("Sadržaj prijave:")]
+        public string Sadržaj { get; set; }
+        
+        [Required]
+        [ForeignKey ("PošiljalacId")]
+        public Korisnik Pošiljalac { get; set; }
+
+        [DisplayName("Korisnik")]
+        public int PošiljalacId { get; set; }
+
+        [NotMapped]
+        [EnumDataType(typeof(StatusPrijave))]
+        [DisplayName("Status:")]
+        
+        public StatusPrijave Status { get; set; }
+
+        [ForeignKey("StatusId")]
+        [DisplayName("Status")]
+        public int StatusId { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayName("Datum prijave:")]
+        public DateTime DatumPrijave { get; set; }
 
         #endregion
 
         #region Konstruktor
 
-        public PrijavaRada(): base() { }
-        public PrijavaRada(string naziv, string sadrzaj, Korisnik posiljalac, DateTime datumPrijave, Rad prijavljeni) : base(naziv, sadrzaj, posiljalac, datumPrijave)
+        public PrijavaRada()
         {
-            PrijavljeniRad = prijavljeni;
-
+            
         }
 
         #endregion

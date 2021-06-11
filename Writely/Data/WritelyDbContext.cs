@@ -20,7 +20,6 @@ namespace Writely.Data
         public DbSet<Rad> Rad { get; set; }
         public DbSet<Takmičenje> Takmičenje { get; set; }
         public DbSet<Recenzija> Recenzija { get; set; }
-        public DbSet<Prijava> Prijava { get; set; }
         public DbSet<PrijavaRada> PrijavaRada { get; set; }
         public DbSet<PrijavaKorisnika> PrijavaKorisnika { get; set; }
 
@@ -31,9 +30,8 @@ namespace Writely.Data
             modelBuilder.Entity<Rad>().ToTable("Rad");
             modelBuilder.Entity<Takmičenje>().ToTable("Takmičenje");
             modelBuilder.Entity<Recenzija>().ToTable("Recenzija");
-           // modelBuilder.Entity<PrijavaRada>().ToTable("PrijavaRada");
-           // modelBuilder.Entity<PrijavaKorisnika>().ToTable("PrijavaKorisnika");
-            modelBuilder.Entity<Prijava>().ToTable("Prijava");
+            modelBuilder.Entity<PrijavaRada>().ToTable("PrijavaRada");
+            modelBuilder.Entity<PrijavaKorisnika>().ToTable("PrijavaKorisnika");
 
         }
 
