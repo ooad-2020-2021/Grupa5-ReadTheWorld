@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Writely.Models.Korisnik>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImePrezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumRegistracije)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DodijeljeneTitule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WritelyMoto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImePrezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumRegistracije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DodijeljeneTitule)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WritelyMoto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
