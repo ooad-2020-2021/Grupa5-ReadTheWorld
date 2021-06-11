@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "DynamicView/1.0.5406.23659": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.5"
+        },
+        "compile": {
+          "lib/net40/DynamicView.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DynamicView.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.12": {
         "type": "package",
         "compile": {
@@ -2714,6 +2726,19 @@
     }
   },
   "libraries": {
+    "DynamicView/1.0.5406.23659": {
+      "sha512": "gdI/OQK5bIM4DIBQoFOVzanueGKhBghAXxPPtdsubWgqHs5biChw4njP8KTgVz5cW4oRBdiNwlLDB20v5ROlRg==",
+      "type": "package",
+      "path": "dynamicview/1.0.5406.23659",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dynamicview.1.0.5406.23659.nupkg.sha512",
+        "dynamicview.nuspec",
+        "lib/net40/DynamicView.XML",
+        "lib/net40/DynamicView.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.12": {
       "sha512": "9V7Acx9lFw2KA23FOqH4TH5wQzZN/px/ovmRWBb8I3rf9arZ/cKniwRmRNrwgmShtQXhu1t124rrl1du2ueODA==",
       "type": "package",
@@ -8833,6 +8858,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DynamicView >= 1.0.5406.23659",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.12",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.12",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.12",
@@ -8880,6 +8906,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "DynamicView": {
+            "target": "Package",
+            "version": "[1.0.5406.23659, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.12, )"
@@ -8928,5 +8958,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DynamicView 1.0.5406.23659' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DynamicView",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
