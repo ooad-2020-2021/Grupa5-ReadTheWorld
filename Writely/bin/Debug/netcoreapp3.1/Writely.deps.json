@@ -31,6 +31,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Writely/1.0.0": {
         "dependencies": {
+          "DynamicView": "1.0.5406.23659",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.12",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12",
           "Microsoft.AspNetCore.Identity.UI": "3.1.12",
@@ -306,6 +307,20 @@
         },
         "compile": {
           "Writely.dll": {}
+        }
+      },
+      "DynamicView/1.0.5406.23659": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/net40/DynamicView.dll": {
+            "assemblyVersion": "1.0.5406.23659",
+            "fileVersion": "1.0.5406.23659"
+          }
+        },
+        "compile": {
+          "lib/net40/DynamicView.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.12": {
@@ -3927,6 +3942,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DynamicView/1.0.5406.23659": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gdI/OQK5bIM4DIBQoFOVzanueGKhBghAXxPPtdsubWgqHs5biChw4njP8KTgVz5cW4oRBdiNwlLDB20v5ROlRg==",
+      "path": "dynamicview/1.0.5406.23659",
+      "hashPath": "dynamicview.1.0.5406.23659.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.12": {
       "type": "package",

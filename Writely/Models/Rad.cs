@@ -14,6 +14,7 @@ namespace Writely.Models
         #region Properties
         [Key]
         [Required]
+        [DisplayName("id")]
         public int id { get; set; }
 
         [Required]

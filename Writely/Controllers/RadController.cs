@@ -22,7 +22,7 @@ namespace Writely.Controllers
         // GET: Rad
         public async Task<IActionResult> Index()
         {
-            var writelyDbContext = _context.Rad.Include(r => r.Autor).Include(r => r.PrijavljenoTakmičenje);
+            var writelyDbContext = _context.Rad.Include(r => r.Autor);
             return View(await writelyDbContext.ToListAsync());
         }
 
@@ -36,7 +36,6 @@ namespace Writely.Controllers
 
             var rad = await _context.Rad
                 .Include(r => r.Autor)
-                .Include(r => r.PrijavljenoTakmičenje)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (rad == null)
             {

@@ -557,7 +557,6 @@ C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Korisnici\Create.cshtml.g.cs
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Korisnici\Delete.cshtml.g.cs
@@ -602,3 +601,5 @@ C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.dll
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.pdb
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.genruntimeconfig.cache
+C:\Users\Korisnik\source\repos\Grupa5-ReadTheWorld\Writely\bin\Debug\netcoreapp3.1\DynamicView.dll
+C:\Users\Korisnik\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs

@@ -4,63 +4,239 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<style>
+    body {
+        /*        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,217,200,1) 34%, rgba(177,116,50,1) 100%, rgba(106,87,74,1) 100%, rgba(0,212,255,1) 100%);*/
+        background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .rad-img {
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    }
+    .btn-scale {
+        min-width: 44px;
+        width: 6%;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        font-family: 'Lato', sans-serif;
+    }
 
-<div>
-    <h4>Rad</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Autor.ImePrezime)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ŽanrId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ŽanrId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.KategorijaId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.KategorijaId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sadržaj)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Sadržaj)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DatumObjave)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DatumObjave)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.tagovi)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.tagovi)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PrijavljenoTakmičenje)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrijavljenoTakmičenje.DozvoljeneKategorije)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    .btn-scale-asc-1, .btn-scale-desc-10 {
+        background-color: #6E2C00;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-1:hover,
+        .btn-scale-desc-10:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-2,
+    .btn-scale-desc-9 {
+        background-color: #873600;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-2:hover,
+        .btn-scale-desc-9:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-3,
+    .btn-scale-desc-8 {
+        background-color: #A04000;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-3:hover,
+        .btn-scale-desc-8:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-4,
+    .btn-scale-desc-7 {
+        background-color: #BA4A00;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-4:hover,
+        .btn-scale-desc-7:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-5,
+    .btn-scale-desc-6 {
+        background-color: #D35400;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-5:hover,
+        .btn-scale-desc-6:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-6,
+    .btn-scale-desc-5 {
+        background-color: #DC7633;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-6:hover,
+        .btn-scale-desc-5:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-7,
+    .btn-scale-desc-4 {
+        background-color: #E59866;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-7:hover,
+        .btn-scale-desc-4:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-8,
+    .btn-scale-desc-3 {
+        background-color: #EDBB99;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-8:hover,
+        .btn-scale-desc-3:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-9,
+    .btn-scale-desc-2 {
+        background-color: #F6DDCC;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-9:hover,
+        .btn-scale-desc-2:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+
+    .btn-scale-asc-10,
+    .btn-scale-desc-1 {
+        background-color: #FBEEE6;
+        height: 35px;
+        width: 10px;
+    }
+
+        .btn-scale-asc-10:hover,
+        .btn-scale-desc-1:hover {
+            background-color: #784212;
+            height: 35px;
+            width: 10px;
+        }
+</style>
+
+<div style="background-color: white; width: 100%; padding: 20px 20px 20px 20px;">
+    <div style="margin-bottom: 7px;">
+        <img class="rad-img" src="https://www.desktopbackground.org/download/o/2014/10/27/846572_open-book-wallpapers_1134x704_h.jpg" />
+    </div>
+    <div>
+        <button class="btn btn-scale btn-scale-desc-1">1</button>
+        <button class="btn btn-scale btn-scale-desc-2">2</button>
+        <button class="btn btn-scale btn-scale-desc-3">3</button>
+        <button class="btn btn-scale btn-scale-desc-4">4</button>
+        <button class="btn btn-scale btn-scale-desc-5">5</button>
+        <button class="btn btn-scale btn-scale-desc-6">6</button>
+        <button class="btn btn-scale btn-scale-desc-7">7</button>
+        <button class="btn btn-scale btn-scale-desc-8">8</button>
+        <button class="btn btn-scale btn-scale-desc-9">9</button>
+        <button class="btn btn-scale btn-scale-desc-10">10</button>
+        <span style="font-size: 20px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Prosječna ocjena: &nbsp 9.5</span>
+    </div>
+    <span style="font-size: 80px; font-family: Perpetua">@Html.DisplayFor(model => model.Naziv)</span> <span style="font-size: 30px; font-family: Perpetua"> by @Html.DisplayFor(model => model.Autor.ImePrezime)</span>
+
+    <div style="margin-bottom: 20px;">
+        @*Kategorija: @{string k = ((Kategorija)Model.KategorijaId).ToString();} @Html.DisplayFor(m => k) <br />*@
+        Žanr: @{string ž = ((Žanr)Model.ŽanrId).ToString();} @Html.DisplayFor(m => ž)
+    </div>
+
+    <div>
+        <p style="font-family: Perpetua; font-size: 20px;">
+            <span style="float: left; width: 0.8em; font-size: 600%; line-height: 80%;">@{string prvoSlovo = Model.Sadržaj.Substring(0, 1);} @Html.DisplayFor(m => prvoSlovo)</span>
+            @*@{string ostaliSadržaj = Model.Sadržaj.Substring(1, Model.Sadržaj.Length - 1);} @Html.DisplayFor(m => ostaliSadržaj)*@
+            Kada se ušeprtljiše Zagrepčani radi onijeh grbova na zgradi državne financije, zovne usplahirena vlast u pomoć vojsku.
+            Bijaše to treći dan bune.
+            Jutro toplo, sunčano. Nebom se nepomično pružio samo jedan, crn i duguljast oblačak:
+            mniš, e je kroz pukotinu modrog plašta nebeskog prokuljao dim.
+            - Vojska ide, ide vojska!
+            I za tili časak prsne šarena gužva. Odvulala se kao pred kakom grozovitom istragom, a
+            na pustom Trgu Jelačićevu ostadoše samo piljarički stolovi i stočići.
+            Za tren oka zabravilo vrata kućna i dućanska.
+            Tišina kao pred groznom bitkom!
+            Malo, a iz Bakačeve ulice kao da šušnu lišće, kao da pljusnu kiša - i diže se bahat kopita.
+            - Soldati ideju, bežimo!
+            - Nedem, makar fratri padali!
+            - Ali, Pepica, draga, lublena Pepica...
+            - Nedem, Joškec, nedem! Kaj mi moreju ovi grintavci? Ja nis' niš kriva!
+            To govori tik do spomenika usamljen par: guravi piljar Pogačić i pretila gospa Pogačićka,
+            koja se ujezerila na svom tronošku kao u staro mirno doba.
+            I zarudi prvi red konjice.
+            - Pepica, za pet ran Kristušovih, smili mi se! Hodi! Buju te fundali ovi mađarski hajuši.
+            I niz modruljasti se nos poštovanog purgara prosu voda iz očiju.
+            - Ali, Pepica, draga, lublena Pepica!
+            - Nedem, Jožica, magari najdepši fratri padali.
+            Tutnji već i gromori: sad će zapljusnuti crveni eskadron.
+            - Pepica! Jojček, kaj bu z nas!
+            I čestiti se purgar zdvojno okrene na peti i stane strugati, strugati niz čaršiju.
+            - Fuj te budi, pajcek vušivi!
+            Drekne i pljune za njim.
+            Konjica joj se već kasom sasvijem prikučila.
+            Tek sada kada se osjeti sama, napuštena, a motreći sve jasnije i jasnije bijesna, blesasta
+            lica i gole ćorde - uhvati babu grdan strah. Ujelo ju nešto duboko u grudima, koljena joj
+            se kucnu, ona dva-tri zuba zacvokotaju, a pred očima joj se zamagli.
+            Šćućuri se i stane gristi nokte. Učini joj se da ju onaj bucmasti oficir s iglastim brcima
+            gleda pakosno, zlurado.
+            - Lezi, babo! - dreknu neko.
+            A ona potresena skoči na noge junačke i baci kao molitven pogled na sionog Bana: u
+            sunčanom se zlatu blista kalpak i menten, a ljuta mu se krivošija u snažnoj desnici kao
+            zapalila...
+        </p>
+    </div>
+    <div>
+        #knjizevnost #beletristika #ovo #ono #umjetnost #ha #hu
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
 </div>
