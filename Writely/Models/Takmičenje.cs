@@ -43,6 +43,11 @@ namespace Writely.Models
         #endregion
 
         #region Konstruktor
+
+        public Takmičenje()
+        {
+            
+        }
         public Takmičenje (string naziv, DateTime datumPocetka, DateTime datumKraja, string dozvoljeneKategorije, string opis)
         {
             this.Naziv = naziv;

@@ -4,56 +4,93 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Naziv)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DatumPocetka)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DatumKraja)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DozvoljeneKategorije)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Opis)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Naziv)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DatumPocetka)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DatumKraja)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DozvoljeneKategorije)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Opis)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
+<style>
+.custom_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25%;
+    padding: 40px;
+    flex-grow: 0;
 }
-    </tbody>
-</table>
+
+.button {
+  
+  border-radius: 12px;
+  border-color: rgba(147,118,102,0.98);
+  color: rgba(52,38,35,0.98);
+  background-color: antiquewhite;
+  padding: 15px 32px;
+  text-align: center;
+  font-style: oblique;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.customarticle {
+    background-color: rgba(178,158,126,0.98);
+    margin: 20px;
+    padding: 20px;
+    border: #a9a7ff;
+    border-radius: 12px;
+    align-self: flex-end;
+    
+}
+
+body {
+        background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    }
+
+    
+</style>
+
+
+
+
+<div class="custom_container">
+    
+    @foreach (Takmičenje item in Model)
+    {
+        <div class="customarticle" style="animation: ease-in">
+            <h3 style=" font-style: italic; font-weight: 700; padding-bottom: 20px; alignment: left; display: inline-block">@item.Naziv</h3>
+            @if (item.DatumKraja > DateTime.Now)
+            {
+                <h4 style=" font-weight: 700; padding-bottom: 20px; alignment: right; display: inline-block; padding-left: 50%">Rok: @item.DatumKraja.Day.@item.DatumKraja.Month.@item.DatumKraja.Year</h4>
+            }
+            <article>
+                <p style="font-size:18px; margin-left: 20px; font-weight: 600">@item.Opis</p>
+            </article>
+            @if (item.DatumKraja < DateTime.Now)
+            {
+                <input class="button" type="button" value="Some text" onclick="@("window.location.href='" + @Url.Action("Rezultati", "TakmičenjeRad") + "'");" />
+            }
+            @if (item.DatumKraja >= DateTime.Now){
+             
+                @if (User.IsInRole("Administrator"))
+                {
+                    <input class="button" type="button" value="Some text" onclick="@("window.location.href='" + @Url.Action("Create", "TakmičenjeRad") + "'");"/>
+                }
+
+                @if (User.IsInRole("Administrator"))
+                {
+                    <input class="button" type="button" value="Edit" onclick="@("window.location.href='" + @Url.Action("Edit", "Takmičenje") + "'");" />
+                    <input class="button" type="button" value="Delete" onclick="@("window.location.href='" + @Url.Action("Delete", "Takmičenje") + "'");" />
+                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad") + "'");" />
+                }
+            }
+           
+            
+        </div>
+            
+        
+
+        
+    }
+
+</div>
