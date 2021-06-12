@@ -35,10 +35,12 @@ namespace Writely.Models
         [AllowNull]
         [EnumDataType (typeof(Žanr))]
         [ForeignKey("ŽanrId")]
+   
         public Žanr? žanr { get; set; }
 
         [Required]
         [DisplayName("Žanr")]
+        [Range(0, 5, ErrorMessage = "Odaberite neki od dostupnih žanrova")]
         [ForeignKey("Kategorija")]
         public int? ŽanrId  { get; set; }
 

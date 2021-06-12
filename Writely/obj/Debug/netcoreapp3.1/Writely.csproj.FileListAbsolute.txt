@@ -602,3 +602,9 @@ C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.dll
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.pdb
 C:\Users\Korisnik\Source\Repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Writely.genruntimeconfig.cache
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\bin\Debug\netcoreapp3.1\DynamicView.dll
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\ObjavljivanjeRada\Create.cshtml.g.cs
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\ObjavljivanjeRada\Delete.cshtml.g.cs
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\ObjavljivanjeRada\Details.cshtml.g.cs
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\ObjavljivanjeRada\Edit.cshtml.g.cs
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\ObjavljivanjeRada\Index.cshtml.g.cs

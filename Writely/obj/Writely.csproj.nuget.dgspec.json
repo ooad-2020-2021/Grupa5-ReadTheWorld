@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {}
+    "C:\\Users\\Hp\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {
+    "C:\\Users\\Hp\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
         "projectName": "Writely",
-        "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
-        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
