@@ -31,6 +31,7 @@ namespace Writely
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<WritelyDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -63,6 +64,10 @@ namespace Writely
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Takmičenje}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

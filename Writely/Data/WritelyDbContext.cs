@@ -7,7 +7,7 @@ using Writely.Models;
 
 namespace Writely.Data
 {
-    public class WritelyDbContext : DbContext
+    public class WritelyDbContext : IdentityDbContext
     { 
         public WritelyDbContext (DbContextOptions<WritelyDbContext> options) : base(options)
         {
@@ -22,6 +22,7 @@ namespace Writely.Data
         public DbSet<Recenzija> Recenzija { get; set; }
         public DbSet<PrijavaRada> PrijavaRada { get; set; }
         public DbSet<PrijavaKorisnika> PrijavaKorisnika { get; set; }
+        public DbSet<TakmičenjeRad> TakmičenjeRad { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +33,8 @@ namespace Writely.Data
             modelBuilder.Entity<Recenzija>().ToTable("Recenzija");
             modelBuilder.Entity<PrijavaRada>().ToTable("PrijavaRada");
             modelBuilder.Entity<PrijavaKorisnika>().ToTable("PrijavaKorisnika");
+            modelBuilder.Entity<TakmičenjeRad>().ToTable("TakmičenjeRad");
+            base.OnModelCreating(modelBuilder);
 
         }
 
