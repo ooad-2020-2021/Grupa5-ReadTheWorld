@@ -60,14 +60,26 @@ namespace Writely.Controllers
             return View(rad);
         }
 
+
+
         // GET: Rad/Create
-        public IActionResult Create()
+        public IActionResult CreateRadZaTakmicenje(int id)
+        {
+            ViewData["AutorId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
+            ViewData["TakmičenjeId"] = id;
+
+            return View();
+        }
+
+
+            // GET: Rad/Create
+            public IActionResult Create()
         {
             ViewData["AutorId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
             ViewData["TakmičenjeId"] = new SelectList(_context.Takmičenje, "id", "DozvoljeneKategorije");
             return View();
         }
-        
+
 
         // POST: Rad/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
