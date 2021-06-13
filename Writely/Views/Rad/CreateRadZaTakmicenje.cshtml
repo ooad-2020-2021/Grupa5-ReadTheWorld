@@ -3,8 +3,8 @@
 @{
     ViewData["Title"] = "Edit";
     string localDate = DateTime.Now.ToLongDateString();
-
-
+ 
+    
 }
 
 <style>
@@ -12,22 +12,21 @@
     body {
         background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     }
-    header{
+
+    header {
         background-color: #c70039;
     }
-    
-   
 </style>
 
 
 <h1>
-   Objavljivanje rada 
-    </h1>
+    Objavljivanje rada
+</h1>
 
-<h4">Unesite podatke o radu</h4>
+<h4>Unesite podatke o radu</h4>
 <hr />
 
-     
+
 <div class="row">
 
     <div class="col-md-4" style="        background-color: tan;
@@ -36,7 +35,7 @@
 ">
 
 
-        <form asp-action="Edit">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
 
@@ -86,15 +85,9 @@
                 <span asp-validation-for="tagovi" class="text-danger"></span>
             </div>
 
-
             <div class="form-group">
-
-
-                <input type="submit" value="Save" class="button" />
-               
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-
-
 
             <div>
                 @Html.ActionLink("Odustani", // <-- Link text
@@ -113,7 +106,7 @@
     <div class="form-group: col-7" style=“ margin:150px; ”>
         <label asp-for="Sadržaj" style="visibility:hidden " font-family: Perpetua" class="control-label"></label>
         <p style="text-align:center ; font-family: Perpetua; font-size: 30px">Sadržaj </p>
-        <form action="/Edit">
+        <form action="/Create">
             <textarea style=" text-align:center;  min-width:500px; max-width:100%;min-height:500px;height:100%;width:100%;">
                    Ovdje započninje vaša priča    </textarea>
             <br><br>

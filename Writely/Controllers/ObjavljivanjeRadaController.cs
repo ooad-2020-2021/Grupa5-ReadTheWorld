@@ -19,7 +19,11 @@ namespace Writely.Controllers
             _context = context;
         }
 
- 
+     
+
+
+
+
 
         // POST: ObjavljivanjeRada/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 

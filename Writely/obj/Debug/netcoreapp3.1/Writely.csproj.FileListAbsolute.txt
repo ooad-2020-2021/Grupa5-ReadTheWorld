@@ -800,3 +800,4 @@ C:\Users\CpuInfotech\RiderProjects\Grupa5-ReadTheWorld\Writely\obj\Debug\netcore
 C:\Users\CpuInfotech\RiderProjects\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Takmičenje\Details.cshtml.g.cs
 C:\Users\CpuInfotech\RiderProjects\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Takmičenje\Edit.cshtml.g.cs
 C:\Users\CpuInfotech\RiderProjects\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Takmičenje\Index.cshtml.g.cs
+C:\Users\Hp\source\repos\Grupa5-ReadTheWorld\Writely\obj\Debug\netcoreapp3.1\Razor\Views\Rad\CreateRadZaTakmicenje.cshtml.g.cs
