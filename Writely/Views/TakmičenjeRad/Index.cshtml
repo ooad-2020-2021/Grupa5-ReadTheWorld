@@ -39,6 +39,15 @@
         position: relative;
         flex-grow: 0;
     }
+    .card {
+            margin: 20px;
+            width: 100%;
+            padding-bottom: 15%;
+            background-color: rgba(219,199,175,0.59);
+            border-radius: 12px;
+            position: relative;
+            flex-grow: 0;
+        }
     img {
         max-width: 100%;
         padding-bottom: 75%;
@@ -66,7 +75,7 @@
     @foreach (var item in Model)
     {
     
-        <card>
+        <div class="card" onclick="@("window.location.href='" + @Url.Action("Details", "Rad", new {id = item.id}) + "'");">
             @if (item.id % 5 == 0)
             {
                 <div class="card-header" style="background-color: rgba(161,87,82,0.98); size: A3"></div>
@@ -102,7 +111,7 @@
             </div>
             
 
-        </card>
+        </div>
     }
 
 
