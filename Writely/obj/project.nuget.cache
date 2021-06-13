@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r4ZQokcgxoHvQQ9C7bkKoW4uVMUaqO8yt1pNOGOkSMPYfleVnEDgdsO8IC/JSaSMDRwYnXDNeHv47h5DhN0dew==",
+  "dgSpecHash": "GO/ixthTEM9w4lGPbpaOq0zP+2ziD0f/X4qICG8wUhRqsZ6Rju3OOcUprI8rcWosgoXgIxSguYPLZSLZTGLwFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Korisnik\\Source\\Repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
+  "projectFilePath": "C:\\Users\\Korisnik\\source\\repos\\Grupa5-ReadTheWorld\\Writely\\Writely.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Korisnik\\.nuget\\packages\\dynamicview\\1.0.5406.23659\\dynamicview.1.0.5406.23659.nupkg.sha512",
     "C:\\Users\\Korisnik\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.12\\microsoft.aspnetcore.cryptography.internal.3.1.12.nupkg.sha512",
