@@ -5,6 +5,12 @@
 }
 
 <style>
+body {
+background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: Perpetua;
+}
 .custom_container {
     display: flex;
     flex-direction: column;
@@ -19,10 +25,9 @@
 
 .button {
   
-  border-radius: 12px;
-  border-color: rgba(147,118,102,0.98);
-  color: rgba(52,38,35,0.98);
-  background-color: antiquewhite;
+  border-radius: 16px;
+  border-color: rgba(207,171,154,0.75);
+  background-color: rgba(234,197,174,0.75);
   padding: 15px 32px;
   text-align: center;
   font-style: oblique;
@@ -34,12 +39,12 @@
 }
 
 .customarticle {
-    background-color: rgba(178,158,126,0.98);
+    background-color: rgba(219,199,175,0.59);
     margin: 20px;
     padding: 20px;
     border: #a9a7ff;
     border-radius: 12px;
-    align-self: flex-end;
+    align-self: flex-start;
     
 }
 
@@ -57,33 +62,30 @@ body {
     
     @foreach (Takmičenje item in Model)
     {
-        <div class="customarticle" style="animation: ease-in">
-            <h3 style=" font-style: italic; font-weight: 700; padding-bottom: 20px; alignment: left; display: inline-block">@item.Naziv</h3>
+        <div class="customarticle" >
+            <h2 style=" font-weight: bold; padding-bottom: 20px; alignment: left; display: inline-block">@item.Naziv</h2>
             @if (item.DatumKraja > DateTime.Now)
             {
-                <h4 style=" font-weight: 700; padding-bottom: 20px; alignment: right; display: inline-block; padding-left: 50%">Rok: @item.DatumKraja.Day.@item.DatumKraja.Month.@item.DatumKraja.Year</h4>
+                <h4 style=" font-weight: 300; padding-bottom: 20px; float: right; display: inline-block; ">Rok: @item.DatumKraja.Day.@item.DatumKraja.Month.@item.DatumKraja.Year</h4>
             }
             <article>
-                <p style="font-size:18px; margin-left: 20px; font-weight: 600">@item.Opis</p>
+                <p style="font-size:18px; margin-left: 20px; font-weight: 500">@item.Opis</p>
             </article>
-            @if (item.DatumKraja < DateTime.Now)
-            {
-                <input class="button" type="button" value="Some text" onclick="@("window.location.href='" + @Url.Action("Rezultati", "TakmičenjeRad") + "'");" />
-            }
-            @if (item.DatumKraja >= DateTime.Now){
+            
+            
              
-                @if (User.IsInRole("Administrator"))
+                @if (User.IsInRole("Registrovani korisnik"))
                 {
-                    <input class="button" type="button" value="Some text" onclick="@("window.location.href='" + @Url.Action("Create", "TakmičenjeRad") + "'");"/>
+                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
                 }
 
                 @if (User.IsInRole("Administrator"))
                 {
-                    <input class="button" type="button" value="Edit" onclick="@("window.location.href='" + @Url.Action("Edit", "Takmičenje") + "'");" />
-                    <input class="button" type="button" value="Delete" onclick="@("window.location.href='" + @Url.Action("Delete", "Takmičenje") + "'");" />
-                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad") + "'");" />
+                    <input class="button" type="button" value="Edit" onclick="@("window.location.href='" + @Url.Action("Edit", "Takmičenje", new {id = item.id}) + "'");" />
+                    <input class="button" type="button" value="Delete" onclick="@("window.location.href='" + @Url.Action("Delete", "Takmičenje", new {id = item.id}) + "'");" />
+                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
                 }
-            }
+           
            
             
         </div>

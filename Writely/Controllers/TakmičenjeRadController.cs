@@ -20,9 +20,12 @@ namespace Writely.Controllers
         }
 
         // GET: TakmičenjeRad
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int id)
         {
-            return View(await _context.TakmičenjeRad.ToListAsync());
+            
+            return View( _context.Rad.ToListAsync().Result.FindAll(delegate(Rad rad)
+            {
+                return rad.TakmičenjeId.Equals(id); }));
         }
 
         // GET: TakmičenjeRad/Details/5
@@ -58,6 +61,7 @@ namespace Writely.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(takmičenjeRad);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
