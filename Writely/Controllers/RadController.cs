@@ -22,7 +22,7 @@ namespace Writely.Controllers
         // GET: Rad
         public async Task<IActionResult> Index()
         {
-            var writelyDbContext = _context.Rad.Include(r => r.Autor).Include(r => r.PrijavljenoTakmičenje);
+            var writelyDbContext = _context.Rad.Include(r => r.Autor);
             return View(await writelyDbContext.ToListAsync());
         }
 
@@ -36,8 +36,22 @@ namespace Writely.Controllers
 
             var rad = await _context.Rad
                 .Include(r => r.Autor)
-                .Include(r => r.PrijavljenoTakmičenje)
                 .FirstOrDefaultAsync(m => m.id == id);
+            //rad.recenzije = await _context.Recenzija.Where(m => m.OcijenjeniRad.id == id).ToListAsync();
+            rad.recenzije = new List<Recenzija> {
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
+                 };
+            //List<string> tagovi = rad.tagovi.Split(",").ToList();
+            //rad.tagoviLista = new List<string>();
+            //List<int> tagoviID = tagovi.Select(int.Parse).ToList();
+            //tagoviID.ForEach(async tagID =>
+            //rad.tagoviLista.Add(await _context.Tag.Where(t => t.id == tagID);
+            rad.tagoviLista = new List<string>{ "knjizevnost","umjetnost","ovo","ono","ha","hu"};
             if (rad == null)
             {
                 return NotFound();
@@ -53,6 +67,7 @@ namespace Writely.Controllers
             ViewData["TakmičenjeId"] = new SelectList(_context.Takmičenje, "id", "DozvoljeneKategorije");
             return View();
         }
+        
 
         // POST: Rad/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 

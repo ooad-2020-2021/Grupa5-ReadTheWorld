@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Writely",
+    "\\Writely\\Controllers"
   ],
+  "SelectedNode": "\\Writely\\Controllers\\TakmičenjeController.cs",
   "PreviewInSolutionExplorer": false
 }

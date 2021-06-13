@@ -14,6 +14,7 @@ namespace Writely.Models
         #region Properties
         [Key]
         [Required]
+        [DisplayName("id")]
         public int id { get; set; }
 
         [Required]
@@ -76,6 +77,11 @@ namespace Writely.Models
         [DisplayName("Takmičenje")]
         public int? TakmičenjeId  { get; set; }
 
+        [NotMapped]
+        public List<Recenzija> recenzije { get; set; }
+        [NotMapped]
+        public List<string> tagoviLista { get; set; }
+
 
         #endregion
 
@@ -104,6 +110,17 @@ namespace Writely.Models
 
         }
 
+        #endregion
+
+        #region Metode
+
+        public double ProsječnaOcjena() {
+            double ukupno = 0;
+            recenzije.ForEach(r => ukupno += r.ocjena);
+            if (recenzije.Count > 0)
+            return ukupno / recenzije.Count;
+            return 0;
+        }
         #endregion
     }
 }

@@ -4,6 +4,15 @@
     ViewData["Title"] = "Create";
 }
 
+<style>
+    body {
+            background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Perpetua;
+        }
+</style>
+
 <h1>Create</h1>
 
 <h4>Korisnik</h4>
@@ -16,16 +25,6 @@
                 <label asp-for="ImePrezime" class="control-label"></label>
                 <input asp-for="ImePrezime" class="form-control" />
                 <span asp-validation-for="ImePrezime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumRegistracije" class="control-label"></label>
-                <input asp-for="DatumRegistracije" class="form-control" />
-                <span asp-validation-for="DatumRegistracije" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DodijeljeneTitule" class="control-label"></label>
-                <input asp-for="DodijeljeneTitule" class="form-control" />
-                <span asp-validation-for="DodijeljeneTitule" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="WritelyMoto" class="control-label"></label>

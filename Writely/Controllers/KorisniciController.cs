@@ -54,10 +54,14 @@ namespace Writely.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,ImePrezime,DatumRegistracije,DodijeljeneTitule,WritelyMoto")] Korisnik korisnik)
+        public async Task<IActionResult> Create(int id, [Bind("ImePrezime,WritelyMoto")] Korisnik korisnik)
         {
             if (ModelState.IsValid)
             {
+                korisnik.DatumRegistracije= DateTime.Now;
+                korisnik.DodijeljeneTitule = "1";
+                korisnik.AktuelnaTitula = Titula.Newbie;
+                korisnik.id = id;
                 _context.Add(korisnik);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
