@@ -114,6 +114,8 @@ namespace Writely.Models
 
         #region Metode
 
+      
+
         public double ProsječnaOcjena() {
             double ukupno = 0;
             recenzije.ForEach(r => ukupno += r.ocjena);

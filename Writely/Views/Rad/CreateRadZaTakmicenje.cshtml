@@ -1,0 +1,135 @@
+﻿@model Writely.Models.Rad
+
+@{
+    ViewData["Title"] = "Edit";
+    string localDate = DateTime.Now.ToLongDateString();
+ 
+    
+}
+
+<style>
+
+    body {
+        background-image: url(https://images.pexels.com/photos/3747490/pexels-photo-3747490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    }
+
+    header {
+        background-color: #c70039;
+    }
+</style>
+
+
+<h1>
+    Objavljivanje rada
+</h1>
+
+<h4>Unesite podatke o radu</h4>
+<hr />
+
+
+<div class="row">
+
+    <div class="col-md-4" style="        background-color: tan;
+        background-blend-mode: soft-light;
+        border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+">
+
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+
+            <div style="visibility:hidden" class="form-group">
+                <label asp-for="AutorId" class="control-label"></label>
+                <select asp-for="AutorId" class="form-control" asp-items="ViewBag.AutorId"></select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Naziv" class="control-label"> </label>
+                <input asp-for="Naziv" class="form-control" />
+                <span asp-validation-for="Naziv" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ŽanrId" class="control-label"></label>
+                <label for="Žanr">:</label>
+                <select asp-for="ŽanrId" name="ŽanrId">
+                    <option value="1">Komedija</option>
+                    <option value="2">Horor</option>
+                    <option value="3">SciFi</option>
+                    <option value="4">Drama</option>
+                </select>
+                <span asp-validation-for="ŽanrId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="KategorijaId" class="control-label"></label>
+                <label for="Kategorija">:</label>
+                <select asp-for="KategorijaId" name="KategorijaId">
+                    <option value="1">Poezija</option>
+                    <option value="2">Esej</option>
+                    <option value="3">Kratka priča</option>
+                    <option value="4">Strip</option>
+                </select>
+                <span asp-validation-for="KategorijaId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="tagovi" class="control-label"></label>
+                <input asp-for="tagovi" class="form-control" />
+                <span asp-validation-for="tagovi" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                @if (User.IsInRole("Registrovani korisnik")) { }
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                }
+            </div>
+
+            <div>
+                @Html.ActionLink("Odustani", // <-- Link text
+                             "Index", // <-- Action Method Name
+                             "Home", // <-- Controller Name
+                             null, // <-- Route value
+                             null // <-- htmlArguments
+                             )
+
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="form-group: col-7" style=“ margin:150px; ”>
+        <label asp-for="Sadržaj" style="visibility:hidden " font-family: Perpetua" class="control-label"></label>
+        <p style="text-align:center ; font-family: Perpetua; font-size: 30px">Sadržaj </p>
+        <form action="/Create">
+            <textarea style=" text-align:center;  min-width:500px; max-width:100%;min-height:500px;height:100%;width:100%;">
+                   Ovdje započninje vaša priča    </textarea>
+            <br><br>
+
+        </form>
+        <span asp-validation-for="Sadržaj" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DatumObjave" style="visibility:hidden" class="control-label"></label>
+        <input asp-for="DatumObjave" type="hidden" value=localDate class="form-control" />
+
+
+        <span asp-validation-for="DatumObjave" class="text-danger"></span>
+    </div>
+
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
