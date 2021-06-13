@@ -171,21 +171,18 @@
         <img class="rad-img" src="https://www.desktopbackground.org/download/o/2014/10/27/846572_open-book-wallpapers_1134x704_h.jpg" />
     </div>
     <div style="overflow: hidden">
-        <div style="float: left">
-            <button class="btn btn-scale btn-scale-desc-1">1</button>
-            <button class="btn btn-scale btn-scale-desc-2">2</button>
-            <button class="btn btn-scale btn-scale-desc-3">3</button>
-            <button class="btn btn-scale btn-scale-desc-4">4</button>
-            <button class="btn btn-scale btn-scale-desc-5">5</button>
-            <button class="btn btn-scale btn-scale-desc-6">6</button>
-            <button class="btn btn-scale btn-scale-desc-7">7</button>
-            <button class="btn btn-scale btn-scale-desc-8">8</button>
-            <button class="btn btn-scale btn-scale-desc-9">9</button>
-            <button class="btn btn-scale btn-scale-desc-10">10</button>
-        </div>
-        <div style="float: right">
-            <span style="font-size: 20px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Prosječna ocjena: &nbsp @{double prosječna = Model.ProsječnaOcjena();}@Html.DisplayFor(m => prosječna)</span>
-        </div>
+        @if (User.IsInRole("Administrator") || User.IsInRole("Registrovani korisnik"))
+        {<div style="float: left">
+                <button class="btn btn-scale btn-scale-desc-1">1</button>
+                <button class="btn btn-scale btn-scale-desc-3">2</button>
+                <button class="btn btn-scale btn-scale-desc-5">3</button>
+                <button class="btn btn-scale btn-scale-desc-7">4</button>
+                <button class="btn btn-scale btn-scale-desc-9">5</button>
+            </div>
+        }
+            <div style="float: right">
+                <span style="font-size: 20px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Prosječna ocjena: &nbsp @{double prosječna = Model.ProsječnaOcjena();}@Html.DisplayFor(m => prosječna)</span>
+            </div>
     </div>
 
     <div>
@@ -200,43 +197,7 @@
     <div>
         <p style="font-family: Perpetua; font-size: 20px;">
             <span style="float: left; width: 0.8em; font-size: 600%; line-height: 80%;">@{string prvoSlovo = Model.Sadržaj.Substring(0, 1);} @Html.DisplayFor(m => prvoSlovo)</span>
-            @*@{string ostaliSadržaj = Model.Sadržaj.Substring(1, Model.Sadržaj.Length - 1);} @Html.DisplayFor(m => ostaliSadržaj)*@
-            Kada se ušeprtljiše Zagrepčani radi onijeh grbova na zgradi državne financije, zovne usplahirena vlast u pomoć vojsku.
-            Bijaše to treći dan bune.
-            Jutro toplo, sunčano. Nebom se nepomično pružio samo jedan, crn i duguljast oblačak:
-            mniš, e je kroz pukotinu modrog plašta nebeskog prokuljao dim.
-            - Vojska ide, ide vojska!
-            I za tili časak prsne šarena gužva. Odvulala se kao pred kakom grozovitom istragom, a
-            na pustom Trgu Jelačićevu ostadoše samo piljarički stolovi i stočići.
-            Za tren oka zabravilo vrata kućna i dućanska.
-            Tišina kao pred groznom bitkom!
-            Malo, a iz Bakačeve ulice kao da šušnu lišće, kao da pljusnu kiša - i diže se bahat kopita.
-            - Soldati ideju, bežimo!
-            - Nedem, makar fratri padali!
-            - Ali, Pepica, draga, lublena Pepica...
-            - Nedem, Joškec, nedem! Kaj mi moreju ovi grintavci? Ja nis' niš kriva!
-            To govori tik do spomenika usamljen par: guravi piljar Pogačić i pretila gospa Pogačićka,
-            koja se ujezerila na svom tronošku kao u staro mirno doba.
-            I zarudi prvi red konjice.
-            - Pepica, za pet ran Kristušovih, smili mi se! Hodi! Buju te fundali ovi mađarski hajuši.
-            I niz modruljasti se nos poštovanog purgara prosu voda iz očiju.
-            - Ali, Pepica, draga, lublena Pepica!
-            - Nedem, Jožica, magari najdepši fratri padali.
-            Tutnji već i gromori: sad će zapljusnuti crveni eskadron.
-            - Pepica! Jojček, kaj bu z nas!
-            I čestiti se purgar zdvojno okrene na peti i stane strugati, strugati niz čaršiju.
-            - Fuj te budi, pajcek vušivi!
-            Drekne i pljune za njim.
-            Konjica joj se već kasom sasvijem prikučila.
-            Tek sada kada se osjeti sama, napuštena, a motreći sve jasnije i jasnije bijesna, blesasta
-            lica i gole ćorde - uhvati babu grdan strah. Ujelo ju nešto duboko u grudima, koljena joj
-            se kucnu, ona dva-tri zuba zacvokotaju, a pred očima joj se zamagli.
-            Šćućuri se i stane gristi nokte. Učini joj se da ju onaj bucmasti oficir s iglastim brcima
-            gleda pakosno, zlurado.
-            - Lezi, babo! - dreknu neko.
-            A ona potresena skoči na noge junačke i baci kao molitven pogled na sionog Bana: u
-            sunčanom se zlatu blista kalpak i menten, a ljuta mu se krivošija u snažnoj desnici kao
-            zapalila...
+            @{string ostaliSadržaj = Model.Sadržaj.Substring(1, Model.Sadržaj.Length - 1);} @Html.DisplayFor(m => ostaliSadržaj)
         </p>
     </div>
     <div>
@@ -244,12 +205,14 @@
             string tag = "#" + t + " ";
         <a asp-controller="Home" asp-action="Index">@Html.DisplayFor(m => tag)</a>
         }
-        
-
     </div>
     <div>
-        <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
+        @*<a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+        <a asp-action="Index">Back to List</a>*@
+        @if (User.IsInRole("Administrator") || User.IsInRole("Registrovani korisnik"))
+        { 
+        <a asp-controller="Recenzije" asp-action="Create" style="font-size:20px; color: chocolate">Daj svoju recenziju</a>
+        }
     </div>
 </div>
 
@@ -262,7 +225,7 @@
         @Html.DisplayFor(m => r.Komentar)
     </div>
     <div style="background-color: white; margin-bottom: 5px; float: right;">
-        <a>Autor komentara</a>
+        <a>@Html.DisplayFor(m => r.Korisnik.ImePrezime)</a>
     </div>
 </div>
     }
