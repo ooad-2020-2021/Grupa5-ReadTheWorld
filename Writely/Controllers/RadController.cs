@@ -62,13 +62,13 @@ namespace Writely.Controllers
 
 
 
-        // GET: Rad/Create
+        // GET: Rad
         public IActionResult CreateRadZaTakmicenje(int id)
         {
             ViewData["AutorId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
             ViewData["TakmičenjeId"] = id;
 
-            return View();
+            return View(id);
         }
 
 
@@ -80,7 +80,7 @@ namespace Writely.Controllers
             return View();
         }
 
-
+       
         // POST: Rad/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -154,6 +154,7 @@ namespace Writely.Controllers
             return View(rad);
         }
 
+       
         // GET: Rad/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

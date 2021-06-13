@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,8 @@ namespace Writely.Controllers
             return View(rad);
         }
 
+
+     
         // GET: ObjavljivanjeRada/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -98,6 +101,8 @@ namespace Writely.Controllers
             return View(rad);
         }
 
+
+        [Authorize(Roles = "Administrator")]
         // GET: ObjavljivanjeRada/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -117,6 +122,7 @@ namespace Writely.Controllers
             return View(rad);
         }
 
+        [Authorize(Roles = "Administrator")]
         // POST: ObjavljivanjeRada/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

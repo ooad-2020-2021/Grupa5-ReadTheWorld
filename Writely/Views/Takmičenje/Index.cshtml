@@ -62,33 +62,34 @@ body {
     
     @foreach (Takmičenje item in Model)
     {
-        <div class="customarticle" >
-            <h2 style=" font-weight: bold; padding-bottom: 20px; alignment: left; display: inline-block">@item.Naziv</h2>
-            @if (item.DatumKraja > DateTime.Now)
-            {
-                <h4 style=" font-weight: 300; padding-bottom: 20px; float: right; display: inline-block; ">Rok: @item.DatumKraja.Day.@item.DatumKraja.Month.@item.DatumKraja.Year</h4>
-            }
-            <article>
-                <p style="font-size:18px; margin-left: 20px; font-weight: 500">@item.Opis</p>
-            </article>
-            
-            
-             
-                @if (User.IsInRole("Registrovani korisnik"))
-                {
-                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
-                }
+    <div class="customarticle">
+        <h2 style=" font-weight: bold; padding-bottom: 20px; alignment: left; display: inline-block">@item.Naziv</h2>
+        @if (item.DatumKraja > DateTime.Now)
+        {
+            <h4 style=" font-weight: 300; padding-bottom: 20px; float: right; display: inline-block; ">Rok: @item.DatumKraja.Day.@item.DatumKraja.Month.@item.DatumKraja.Year</h4>
+        }
+        <article>
+            <p style="font-size:18px; margin-left: 20px; font-weight: 500">@item.Opis</p>
+        </article>
 
-                @if (User.IsInRole("Administrator"))
-                {
-                    <input class="button" type="button" value="Edit" onclick="@("window.location.href='" + @Url.Action("Edit", "Takmičenje", new {id = item.id}) + "'");" />
-                    <input class="button" type="button" value="Delete" onclick="@("window.location.href='" + @Url.Action("Delete", "Takmičenje", new {id = item.id}) + "'");" />
-                    <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
-                }
-           
-           
-            
-        </div>
+
+
+        @if (User.IsInRole("Registrovani korisnik"))
+        {
+            <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
+        }
+
+        @if (User.IsInRole("Administrator"))
+        {
+            <input class="button" type="button" value="Edit" onclick="@("window.location.href='" + @Url.Action("Edit", "Takmičenje", new {id = item.id}) + "'");" />
+            <input class="button" type="button" value="Delete" onclick="@("window.location.href='" + @Url.Action("Delete", "Takmičenje", new {id = item.id}) + "'");" />
+            <input class="button" type="button" value="Radovi" onclick="@("window.location.href='" + @Url.Action("Index", "TakmičenjeRad", new {id = item.id}) + "'");" />
+            <input class="button" type="button" value="Objavi rad"  onclick = "@("window.location.href = '" + @Url.Action("CreateRadZaTakmicenje", "Rad", new {id=item.id}) + "'");" />
+        }
+
+
+
+    </div>
             
         
 
