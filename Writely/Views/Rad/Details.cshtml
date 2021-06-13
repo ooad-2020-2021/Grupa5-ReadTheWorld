@@ -166,24 +166,31 @@
         }
 </style>
 
-<div style="background-color: white; width: 100%; padding: 20px 20px 20px 20px;">
+<div style="background-color: white; width: 100%; padding: 20px 20px 20px 20px; margin-bottom: 10px;">
     <div style="margin-bottom: 7px;">
         <img class="rad-img" src="https://www.desktopbackground.org/download/o/2014/10/27/846572_open-book-wallpapers_1134x704_h.jpg" />
     </div>
-    <div>
-        <button class="btn btn-scale btn-scale-desc-1">1</button>
-        <button class="btn btn-scale btn-scale-desc-2">2</button>
-        <button class="btn btn-scale btn-scale-desc-3">3</button>
-        <button class="btn btn-scale btn-scale-desc-4">4</button>
-        <button class="btn btn-scale btn-scale-desc-5">5</button>
-        <button class="btn btn-scale btn-scale-desc-6">6</button>
-        <button class="btn btn-scale btn-scale-desc-7">7</button>
-        <button class="btn btn-scale btn-scale-desc-8">8</button>
-        <button class="btn btn-scale btn-scale-desc-9">9</button>
-        <button class="btn btn-scale btn-scale-desc-10">10</button>
-        <span style="font-size: 20px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Prosječna ocjena: &nbsp 9.5</span>
+    <div style="overflow: hidden">
+        <div style="float: left">
+            <button class="btn btn-scale btn-scale-desc-1">1</button>
+            <button class="btn btn-scale btn-scale-desc-2">2</button>
+            <button class="btn btn-scale btn-scale-desc-3">3</button>
+            <button class="btn btn-scale btn-scale-desc-4">4</button>
+            <button class="btn btn-scale btn-scale-desc-5">5</button>
+            <button class="btn btn-scale btn-scale-desc-6">6</button>
+            <button class="btn btn-scale btn-scale-desc-7">7</button>
+            <button class="btn btn-scale btn-scale-desc-8">8</button>
+            <button class="btn btn-scale btn-scale-desc-9">9</button>
+            <button class="btn btn-scale btn-scale-desc-10">10</button>
+        </div>
+        <div style="float: right">
+            <span style="font-size: 20px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Prosječna ocjena: &nbsp @{double prosječna = Model.ProsječnaOcjena();}@Html.DisplayFor(m => prosječna)</span>
+        </div>
     </div>
-    <span style="font-size: 80px; font-family: Perpetua">@Html.DisplayFor(model => model.Naziv)</span> <span style="font-size: 30px; font-family: Perpetua"> by @Html.DisplayFor(model => model.Autor.ImePrezime)</span>
+
+    <div>
+        <span style="font-size: 80px; font-family: Perpetua">@Html.DisplayFor(model => model.Naziv)</span> <span style="font-size: 30px; font-family: Perpetua"> by @Html.DisplayFor(model => model.Autor.ImePrezime)</span>
+    </div>
 
     <div style="margin-bottom: 20px;">
         @*Kategorija: @{string k = ((Kategorija)Model.KategorijaId).ToString();} @Html.DisplayFor(m => k) <br />*@
@@ -233,10 +240,30 @@
         </p>
     </div>
     <div>
-        #knjizevnost #beletristika #ovo #ono #umjetnost #ha #hu
+        @foreach (string t in Model.tagoviLista) {
+            string tag = "#" + t + " ";
+        <a asp-controller="Home" asp-action="Index">@Html.DisplayFor(m => tag)</a>
+        }
+        
+
     </div>
     <div>
         <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
         <a asp-action="Index">Back to List</a>
     </div>
+</div>
+
+<div style="background-color: burlywood; padding: 5px;">
+    <h4>Komentari</h4>
+    @foreach (Recenzija r in Model.recenzije)
+    {
+<div style="overflow: hidden">
+    <div style="background-color: white; margin-bottom: 5px; float: left;">
+        @Html.DisplayFor(m => r.Komentar)
+    </div>
+    <div style="background-color: white; margin-bottom: 5px; float: right;">
+        <a>Autor komentara</a>
+    </div>
+</div>
+    }
 </div>
