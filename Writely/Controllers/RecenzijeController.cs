@@ -49,8 +49,8 @@ namespace Writely.Controllers
         // GET: Recenzije/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
-            ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv");
+            //ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
+            //ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace Writely.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,ocjena,Komentar,KorisnikId,RadId")] Recenzija recenzija)
+        public async Task<IActionResult> Create([Bind("id,ocjena,Komentar")] Recenzija recenzija)
         {
             if (ModelState.IsValid)
             {
@@ -67,8 +67,8 @@ namespace Writely.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime", recenzija.KorisnikId);
-            ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv", recenzija.RadId);
+            //ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime", recenzija.KorisnikId);
+            //ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv", recenzija.RadId);
             return View(recenzija);
         }
 

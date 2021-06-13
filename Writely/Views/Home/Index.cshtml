@@ -71,7 +71,28 @@
             grid-template-columns: repeat(3, 1fr);
             margin-bottom: 300px;
         }
+    .topnav {
+        overflow: hidden;
+        background-color: burlywood;
+    }
+        /* Style the search box inside the navigation bar */
+        .topnav input[type=text] {
+            float: left;
+            padding: 6px;
+            border: none;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            margin-left: 4px;
+            font-size: 17px;
+        }
 </style>
+
+@*@using (Html.BeginForm())
+{
+<div class="topnav">
+    <input type="text" placeholder="Pretraži radove...">
+</div>
+}*@
 
 <div class="grid-container">
     @foreach (var item in Model)

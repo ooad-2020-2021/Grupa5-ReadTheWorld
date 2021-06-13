@@ -37,21 +37,13 @@ namespace Writely.Controllers
             var rad = await _context.Rad
                 .Include(r => r.Autor)
                 .FirstOrDefaultAsync(m => m.id == id);
-            //rad.recenzije = await _context.Recenzija.Where(m => m.OcijenjeniRad.id == id).ToListAsync();
-            rad.recenzije = new List<Recenzija> {
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                new Recenzija(9,"Super djelo, zaista sam uživao čitajući"),
-                 };
+            rad.recenzije = await _context.Recenzija.Where(m => m.OcijenjeniRad.id == id).ToListAsync();
             //List<string> tagovi = rad.tagovi.Split(",").ToList();
             //rad.tagoviLista = new List<string>();
             //List<int> tagoviID = tagovi.Select(int.Parse).ToList();
             //tagoviID.ForEach(async tagID =>
             //rad.tagoviLista.Add(await _context.Tag.Where(t => t.id == tagID);
-            rad.tagoviLista = new List<string>{ "knjizevnost","umjetnost","ovo","ono","ha","hu"};
+            rad.tagoviLista = new List<string> { "knjizevnost", "umjetnost", "ovo", "ono", "ha", "hu" };
             if (rad == null)
             {
                 return NotFound();
@@ -87,59 +79,30 @@ namespace Writely.Controllers
             return View(rad);
         }
 
-        // GET: Rad/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Recenzije/Create
+        public IActionResult RecenzijaCreate()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var rad = await _context.Rad.FindAsync(id);
-            if (rad == null)
-            {
-                return NotFound();
-            }
-            ViewData["AutorId"] = new SelectList(_context.Korisnik, "id", "ImePrezime", rad.AutorId);
-            ViewData["TakmičenjeId"] = new SelectList(_context.Takmičenje, "id", "DozvoljeneKategorije", rad.TakmičenjeId);
-            return View(rad);
+            //ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime");
+            //ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv");
+            return View();
         }
 
-        // POST: Rad/Edit/5
+        // POST: Recenzije/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Naziv,AutorId,ŽanrId,KategorijaId,Sadržaj,DatumObjave,tagovi,TakmičenjeId")] Rad rad)
+        public async Task<IActionResult> RecenzijaCreate([Bind("id,ocjena,Komentar")] Recenzija recenzija)
         {
-            if (id != rad.id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(rad);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RadExists(rad.id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _context.Add(recenzija);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorId"] = new SelectList(_context.Korisnik, "id", "ImePrezime", rad.AutorId);
-            ViewData["TakmičenjeId"] = new SelectList(_context.Takmičenje, "id", "DozvoljeneKategorije", rad.TakmičenjeId);
-            return View(rad);
+            //ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "id", "ImePrezime", recenzija.KorisnikId);
+            //ViewData["RadId"] = new SelectList(_context.Rad, "id", "Naziv", recenzija.RadId);
+            return View(recenzija);
         }
 
         // GET: Rad/Delete/5
