@@ -23,7 +23,7 @@ namespace Writely.Controllers
         public async Task<IActionResult> Index(int id)
         {
             
-            return View( _context.TakmičenjeRad.ToListAsync().Result.FindAll(delegate(TakmičenjeRad rad)
+            return View( _context.Rad.ToListAsync().Result.FindAll(delegate(Rad rad)
             {
                 return rad.TakmičenjeId.Equals(id); }));
         }

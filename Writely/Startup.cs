@@ -69,6 +69,10 @@ namespace Writely
                     name: "default",
                     pattern: "{controller=Takmičenje}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Rad}/{action=Create}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

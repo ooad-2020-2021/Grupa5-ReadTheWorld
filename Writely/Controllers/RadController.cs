@@ -67,6 +67,7 @@ namespace Writely.Controllers
             ViewData["TakmičenjeId"] = new SelectList(_context.Takmičenje, "id", "DozvoljeneKategorije");
             return View();
         }
+        
 
         // POST: Rad/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
